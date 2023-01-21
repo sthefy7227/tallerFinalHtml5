@@ -1,0 +1,37 @@
+<!--Crear una lista ordenada de 10 frutas, las que usted desee, debe de aplicar
+    dos temas de colores seleccionables y aplicables a la página web. El primer 
+    tema deberá seleccionar de color diferente al habitual los elementos pares,
+    el segundo tema deberá resaltar del color anterior los elementos impares 
+    de la lista ordenada.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>frutas</title>
+    <link rel="stylesheet"href="stylos.css"/>
+    <script src="javaSC.js"></script>
+</head>
+<body>
+    <div id="body">
+    <select name="fondo" id='fondo' onchange="cambiarfondo(this)">
+        <option value = "ninguno">TEMAS (ninguno)</option>
+        <option value = "orange1">TEMA 1 (Naranja pares)</option>
+        <option value = "orange2"> TEMA 2 (Naranja impares)</option>
+    </select>
+    <div class="panel">
+        <ol>
+          <li id="tema1" >1. Manzana </li>
+          <li id="tema2">2. Banana</li>
+          <li id="tema3" >3. Naranja</li>
+          <li id="tema4">4. Mango</li>
+          <li id="tema5" >5. Melón</li>
+          <li id="tema6">6. Papaya</li>
+          <li id="tema7" >7. Pera</li>
+          <li id="tema8">8. Uva</li>
+          <li id="tema9" >9. Fresa</li>
+          <li id="tema10">10. Piña</li>
+        </ol>
+    </div>
+</div>
+
+</body>
+</html>
