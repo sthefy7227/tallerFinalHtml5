@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>talleres de PSeInt</title>
+    <link rel="stylesheet"href="stilops.css"/>
+</head>
+<body>
+    <br><br><h1 class="titulo">Taller 3 PSeInt ciclos</h1><br><br>
+    <div class="itemp">  
+        <button class="acordeonp">PRIMER PUNTO</button>
+        <div class="panelp">
+            <img src="p16.jpeg"class="imagen" alt="p16">
+           <p class="texto">
+            Realizar la siguiente figura por medio del ciclo Para<br><br>
+            * <br>
+            **<br>
+            ***<br>
+            ****<br>
+            *****<br>
+            ******<br>
+            *******<br>
+            ********<br>
+            *********<br>
+            **********<br>
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso primer_punto
+                    Definir control, control2 Como entero;
+                    para control <- 1 Hasta 10 Con Paso 1  Hacer
+                        para control2 <- 1 Hasta control Hacer
+                            Escribir "*" Sin Saltar;
+                            
+                        FinPara
+                        Escribir " ";
+                    FinPara
+                    
+                FinProceso
+            </pre>
+            
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">SEGUNDO PUNTO</button>
+        <div class="panelp">
+            <img src="p17.jpeg"class="imagen" alt="p17">
+           <p class="texto">
+            Realizar la siguiente figura por medio del ciclo Mientras - Hacer<br><br>
+            <pre>
+                     *
+                    **
+                   ***
+                  ****
+                 *****
+                ******
+               *******
+              ********
+             *********
+            **********
+        </pre>
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso programa_2
+
+                    Definir i, j Como Entero;
+                    i<-1;
+                    
+                    Mientras (i<=10) Hacer
+                        j<-1;
+                        Mientras j<=10 Hacer
+                            
+                            Si j>(10-i) Entonces
+                                Escribir Sin Saltar '*';
+                            SiNo
+                                Escribir Sin Saltar ' ';
+                            FinSi
+                            Si j=10 Entonces
+                                Escribir '';
+                            FinSi
+                            j<-j+1;
+                        FinMientras
+                        i<-i+1;
+                    FinMientras
+                    
+                FinProceso
+
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">TERCER PUNTO</button>
+        <div class="panelp">
+            <img src="p18.jpeg"class="imagen" alt="p18">
+           <p class="texto">
+            Realizar la siguiente figura por medio del ciclo Repetir - Hasta Que<br><br>
+            <pre>
+                 *
+                ***
+               *****
+              *******
+             *********
+            ***********
+           *************
+          ***************
+         *****************
+        *******************
+       *********************
+                ***
+                ***
+               *****
+              *******
+            </pre>
+
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso programa_3
+                    Definir i,j,a,b Como Entero;
+                    i <- 1;
+                    b<-2;
+                    Repetir
+                        j<-0;
+                        Si (i<12) Entonces
+                            Repetir
+                                j<-j+1;
+                                Si (j<=(20/2)-i+1) O (j>=(20/2)+i+1) Entonces
+                                    Escribir sin saltar ' ';
+                                FinSi
+                                Si (j>(20/2)-i+1) Y(j<(20/2)+i+1) Entonces
+                                    Escribir Sin Saltar '*';
+                                    
+                                FinSi
+                                
+                                Si j=21 Entonces
+                                    Escribir " ";		
+                                    
+                                FinSi
+                            Hasta Que j=21
+                        FinSi
+                        Si (i=12) Entonces
+                            a <-2;
+                            Repetir
+                                j<-j+1;
+                                Si (j<=(20/2)-a+1) O(j>=(20/2)+a+1) Entonces
+                                    Escribir sin saltar ' ';
+                                FinSi
+                                Si (j>(20/2)-a+1) Y(j<(20/2)+a+1) Entonces
+                                    Escribir Sin Saltar '*';
+                                    
+                                FinSi
+                                
+                                
+                                Si j=21 Entonces
+                                    Escribir " ";		
+                                    
+                                FinSi
+                                
+                                
+                                
+                            Hasta Que j=21
+                        FinSi	
+                        Si (i>12) Entonces
+                            Repetir
+                                j<-j+1;
+                                Si (j<=(20/2)-b+1) O(j>=(20/2)+b+1) Entonces
+                                    Escribir sin saltar ' ';
+                                FinSi
+                                Si (j>(20/2)-b+1) Y(j<(20/2)+b+1) Entonces
+                                    Escribir Sin Saltar '*';
+                                    
+                                FinSi
+                                
+                                
+                                Si j=21 Entonces
+                                    Escribir " ";		
+                                    
+                                FinSi
+                                
+                            Hasta Que j=21
+                            b<-b+1;
+                        FinSi	
+                        i<-i+1;
+                    Hasta Que i=16;
+                FinProceso
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">CUARTO PUNTO</button>
+        <div class="panelp">
+            <img src="p19.jpeg"class="imagen" alt="p19">
+           <p class="texto">
+            Se requiere un programa que pueda crear la tabla de multiplicar del número que el usuario indique por medio 
+            del ciclo Para; esta debe ser impresa del 1 al 10. Ejemplo, si el usuario indica que desea crear la tabla 
+            del 5, entonces el resultado debería ser el siguiente:<br><br>
+            1 x 5 = 5<br>
+            2 x 5 = 10<br>
+            3 x 5 = 15<br>
+            4 x 5 = 20<br>
+            5 x 5 = 25<br>
+            6 x 5 = 30<br>
+            7 x 5 = 35<br>
+            8 x 5 = 40<br>
+            9 x 5 = 45<br>
+            10 x 5 = 50<br>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso programa_4
+                    Definir tabla, i, res Como Entero;
+                    Escribir "ingrese la tabla a mostrar";
+                    leer tabla;
+                    para i <- 0 Hasta 10 Con Paso 1 Hacer
+                        res <- tabla * i ;
+                        Escribir tabla, " x ", i, " = ", res;
+                    FinPara
+                    
+                FinProceso
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">QUINTO PUNTO</button>
+        <div class="panelp">
+            <img src="p20.jpeg"class="imagen" alt="p20">
+           <p class="texto">
+            Utilizando el ciclo que usted desee, crear un menú de ejecución infinita hasta que el usuario desee 
+            terminar dicho ciclo.<br><br>
+            MENU DE USUARIO<br>
+            1.Capturar Nombre<br>
+            2.Saludar persona<br>
+            3.Salir del sistema<br>
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso programa_5
+                    Definir opcion Como Entero;
+                    Definir nombre Como Caracter;
+                    Escribir "digite una opcion";
+                    Repetir
+                        Escribir "1. captura nombre";
+                        Escribir "2. saluda persona";
+                        Escribir "3. salir del sistema";
+                        leer opcion;
+                        segun opcion hacer 
+                            1:
+                                Escribir "escribe tu nombre";
+                                leer nombre;
+                                Esperar 3 Segundos;
+                                Limpiar Pantalla;
+                            2:
+                                Escribir "hola ", nombre;
+                                Esperar 3 Segundos;
+                                Limpiar Pantalla;
+                        FinSegun
+                    Hasta Que opcion == 3
+                    
+                FinProceso
+            </pre>
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">SEXTO PUNTO</button>
+        <div class="panelp">
+            <img src="p21.jpeg"class="imagen" alt="21">
+           <p class="texto">
+            Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos 
+            telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y 
+            organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no 
+            esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde 
+            que el sistema debe terminar cuando el usuario así lo indique.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso programa_6
+                    Definir contacto1, contacto2, contacto3 Como Entero;
+                    Definir nombre,nombrecliente1, nombrecliente2, nombrecliente3,telefono1,telefono2,telefono3,organizacion1,organizacion2,organizacion3,Salir,Siguiente Como Caracter;
+
+                    Repetir
+                        escribir"Digita tu Nombre";
+                        leer nombre;
+                        Escribir "Aqui vas Agregar tus Contactos"; 
+                        contacto1 <- 1;
+                        Si contacto1 = 1 Entonces
+                            Escribir "Agrega tu Primer contacto ";
+                            Escribir "Numero de Telefono de tu Primer Contacto";
+                            Leer telefono1;
+                            Escribir "Nombre de tu Primer Contacto";
+                            Leer nombrecliente1;
+                            Escribir " Que organización Pertenece Tu Primer Contacto";
+                            Leer organizacion1;
+                            Escribir "";
+                            Escribir "¿Quieres Agregar Otro Contacto a Tu Libreta de Dirección?";
+                            Escribir "(Si)";
+                            Escribir "(No)";
+                            Leer Siguiente;
+                            Si Siguiente = "si" o Siguiente = "Si" Entonces 
+                                Limpiar Pantalla;
+                                Escribir "Numero de Telefono de tu Segundo Contacto";
+                                Leer telefono2;
+                                si telefono2 = telefono1 Entonces
+                                    Escribir "El Numero de Telefono Existe en esta Libreta";
+                                SiNo
+                                    Escribir "Nombre de tu Segundo Contacto";
+                                    Leer nombrecliente2;
+                                    Escribir "Que organización Pertenece Tu Segundo  Contacto";
+                                    Leer organizacion2;
+                                    Escribir "*********";
+                                    Escribir "¿Quieres Agregar Otro Contacto a Tu Libreta de Dirección?";
+                                    Escribir "(Si)";
+                                    Escribir "(No)";
+                                    Leer Siguiente;
+                                    Si Siguiente = "si" o Siguiente = "Si" Entonces
+                                        Limpiar Pantalla;
+                                        Escribir "Numero de Telefono de tu Tercer Contacto";
+                                        Leer telefono3;
+                                        si telefono3 = telefono1 o telefono3 = telefono2 Entonces
+                                            Escribir "El Numero de Telefono Existe en esta Libreta";
+                                        SiNo
+                                            Escribir "Nombre de tu Tercer Contacto";
+                                            Leer nombrecliente3;
+                                            Escribir "Que organización Pertenece Tu Tercer  Contacto";
+                                            Leer organizacion3;
+                                            Escribir "*******";
+                                            Escribir "SR(@) ",  nombre  ,"  Esto son los Contactos Guardados en la Libreta de Direccion";
+                                            Escribir "1. Teléfono: ", telefono1, ", Nombre: ", nombrecliente1, ", Organización " , organizacion1; 
+                                            Escribir "2. Teléfono: ", telefono2, ", Nombre: ", nombrecliente2, ", Organización " , organizacion2;
+                                            Escribir "3. Teléfono: ", telefono3, ", Nombre: ", nombrecliente3, ", Organización " , organizacion3;
+                                        FinSi
+                                    FinSi
+                                FinSi	
+                            FinSi
+                        FinSi
+                        Escribir "";
+                        Escribir "¿Desea Salir?";
+                        Escribir "(Si).";
+                        Escribir "(No).";
+                        Leer salir;
+                    Hasta Que salir = "Si" o salir = "si";
+                    
+                FinProceso
+
+            </pre>
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">SEPTIMO PUNTO</button>
+        <div class="panelp">
+            <img src="p22.jpeg"class="imagen" alt="p22">
+           <p class="texto">
+            El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y 
+            requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere
+            que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como 
+            son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al 
+            parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde 
+            que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo 
+            puede almacenar máximo 5 vehículos.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso programa_7
+                    Definir Capacidad, Ocupados, Menu , Cel Como Entero;
+                    Definir Placa,Cliente,Marca,ll Como Caracter;
+                    Capacidad<-5;
+                    Ocupados<-0;
+                    Repetir
+                        Limpiar Pantalla;
+                        Escribir "bienvenido al parquedero el guardian seleccione una opcion ";
+                        Escribir "   1. ingresar vehiculo";
+                        Escribir "   2. retirar vehiculo";
+                        Escribir "   3. consultar";
+                        Escribir "   4. Salir";
+                        Leer Menu;
+                        Segun Menu Hacer
+                            1:
+                                Si (Ocupados = 5) Entonces
+                                    Escribir "No hay estacionamiento disponible";
+                                SiNo
+                                    Escribir "Su Nombre, por Favor";
+                                    leer Cliente;
+                                    escribir"Su Numero de Celular, porfavor";
+                                    leer Cel;
+                                    Escribir " Placa Vehículo, por Favor";
+                                    Leer Placa;
+                                    Escribir "Marca de su Vehiculo, por Favor";
+                                    Leer Marca;
+                                    Escribir "SR(@) ",Cliente," Su Vehiculo  con Placa ",Placa," de Marca  ", Marca," ha Ingresado al Parqueadero EL Guardian ";
+                                    Escribir "Placa Ingresada Exitosamente ", Placa;
+                                    Ocupados <- Ocupados+1;
+                                FinSi
+                            2:
+                                Escribir "Ingresar Placa Vehículo";
+                                Leer Placa;
+                                Escribir "Placa que Sale: ", Placa;
+                                Ocupados <- Ocupados-1;
+                            3:
+                                Escribir "El Número de estacionamientos ocupados es: ", Ocupados," con el vehiculo de placas ",Placa;
+                                
+                            4:
+                                Escribir "Gracias, vuelva pronto";
+                            De otro modo:
+                                Escribir "Opción no válida";
+                        FinSegun
+                        Escribir "Presione enter para continuar";
+                        Esperar Tecla;
+                    Hasta Que menu=4
+                    
+                FinProceso
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">OCTAVO PUNTO</button>
+        <div class="panelp">
+            <img src="p23.jpeg"class="imagen" alt="p23">
+           <p class="texto">
+            La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en 
+            los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite 
+            de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, 
+            consultar usuarios que hayan presentado el curso y resultados de la prueba del curso 
+            (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
+            Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso programa_8
+                    Definir Aprendiz1, Aprendiz2, Aprendiz3, Aprendiz4, Aprendiz5,Aprendiz6;
+                    Definir Aprendiz7, Aprendiz8,C1, C2, C3, C4, C5, C6, C7, C8  Como Caracter;
+                    Definir CedulaAprendiz1,CedulaAprendiz2,CedulaAprendiz3,CedulaAprendiz4;
+                    Definir CedulaAprendiz5,CedulaAprendiz6 como caracter;
+                    Definir CedulaAprendiz7,CedulaAprendiz8 Como Caracter;
+                    
+                    Definir Menu, Cedula ,nombreadmi Como Caracter;
+                    Definir ingreso, aprobar Como Entero;
+                    Aprendiz1 <-" ";   
+                    Aprendiz2 <-" "; 
+                    Aprendiz3 <- "";
+                    Aprendiz4 <- ""; 
+                    Aprendiz5 <- ""; 
+                    Aprendiz6 <- "";
+                    Aprendiz7 <- "";
+                    Aprendiz8 <- "";
+                    CedulaAprendiz1 <- "Vacio"; 
+                    CedulaAprendiz2 <- "Vacio";
+                    CedulaAprendiz3 <- "Vacio"; 
+                    CedulaAprendiz4 <- "Vacio"; 
+                    CedulaAprendiz5 <- "Vacio"; 
+                    CedulaAprendiz6 <- "Vacio";
+                    CedulaAprendiz7 <- "Vacio"; 
+                    CedulaAprendiz8 <- "Vacio";
+                    C1 <- ""; 
+                    C2 <- "";
+                    C3 <- "";
+                    C4 <- "";
+                    C5 <- "";
+                    C6 <- "";
+                    C7 <- ""; 
+                    C8 <- "";
+                    
+                    escribir"Digita tu Nombre";
+                    leer nombreadmi;
+                    
+                    Escribir nombreadmi," bienvenido seleccione una opcion ";
+                    
+                    ingreso <- 0;
+                    Repetir	
+                        Escribir "1. Para ingresar un Estudiante";
+                        Escribir "2. Para Aprobar un Estudiante";
+                        Escribir "3. Consultar Licenciados";
+                        Escribir "4. Salir del Sistema";
+                        Leer Menu;
+                        Si Menu = "1" Entonces
+                            
+                            Escribir "Ingreso de Estudiantes para el curso de conducción";
+                            Si Aprendiz1 = "" Entonces
+                                Escribir "Ingrese el Nombre del Estudiante";
+                                Leer Aprendiz1;
+                                Escribir "Ingrese el Cédula del Estudiante";
+                                Leer CedulaAprendiz1;
+                                C1 <- "Inscrito";
+                            SiNo
+                                Si Aprendiz2 = "" Entonces
+                                    Escribir "Ingrese el Nombre del Estudiante";
+                                    Leer Aprendiz2;
+                                    Escribir "Ingrese el Cédula del Estudiante";
+                                    Leer CedulaAprendiz2;
+                                    C1 <- "Inscrito";
+                                SiNO
+                                    Si Aprendiz3 = "" Entonces
+                                        Escribir "Ingrese el Nombre del Estudiante";
+                                        Leer Aprendiz3;
+                                        Escribir "Ingrese el Cédula del Estudiante";
+                                        Leer CedulaAprendiz3;
+                                        C3 <- "Inscrito";
+                                    SiNO
+                                        Si Aprendiz4 = "" Entonces
+                                            Escribir "Ingrese el Nombre del Estudiante";
+                                            Leer Aprendiz4;
+                                            Escribir "Ingrese el Cédula del Estudiante";
+                                            Leer CedulaAprendiz4;
+                                            C4 <- "Inscrito";
+                                        SiNO
+                                            Si Aprendiz5 = "" Entonces
+                                                Escribir "Ingrese el Nombre del Estudiante";
+                                                Leer Aprendiz5;
+                                                Escribir "Ingrese el Cédula del Estudiante";
+                                                Leer CedulaAprendiz5;
+                                                C5 <- "Inscrito";
+                                            SiNO
+                                                Si Aprendiz6 = "" Entonces
+                                                    Escribir "Ingrese el Nombre del Estudiante";
+                                                    Leer Aprendiz6;
+                                                    Escribir "Ingrese el Cédula del Estudiante";
+                                                    Leer  CedulaAprendiz6;
+                                                    C6 <- "Inscrito";
+                                                SiNO
+                                                    Si Aprendiz7 = "" Entonces
+                                                        Escribir "Ingrese el Nombre del Estudiante";
+                                                        Leer Aprendiz7;
+                                                        Escribir "Ingrese el Cédula del Estudiante";
+                                                        Leer CedulaAprendiz7;
+                                                        C7 <- "Inscrito";
+                                                    SiNO
+                                                        Si Aprendiz8 = "" Entonces
+                                                            Escribir "Ingrese el Nombre del Estudiante";
+                                                            Leer Aprendiz8;
+                                                            Escribir "Ingrese el Cédula del Estudiante";
+                                                            Leer CedulaAprendiz8;
+                                                            C8 <- "Inscrito";
+                                                        FinSi
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                        FinSi
+                        
+                        Si Menu = "2"  Entonces
+                            Escribir " Aprobar Licencia a Aprendiz";
+                            Escribir "";
+                            Escribir "Ingrese la Cédula del Aprendiz";
+                            Leer Cedula;
+                            Si Cedula = CedulaAprendiz1 Entonces
+                                C1 <- "Aprobado";
+                            SiNo
+                                Si Cedula = CedulaAprendiz2 Entonces
+                                    C2 <- "Aprobado";
+                                SiNo
+                                    Si Cedula = CedulaAprendiz3 Entonces
+                                        C3 <- "Aprobado";
+                                    SiNo
+                                        Si Cedula = CedulaAprendiz4 Entonces
+                                            C4 <- "Aprobado";
+                                        SiNo
+                                            Si Cedula = CedulaAprendiz5 Entonces
+                                                C5 <- "Aprobado";
+                                            SiNo
+                                                Si Cedula = CedulaAprendiz6 Entonces
+                                                    
+                                                    C6<- "Aprobado";
+                                                SiNo
+                                                    Si Cedula = CedulaAprendiz7 Entonces
+                                                        C7 <- "Aprobado";
+                                                    SiNo
+                                                        Si Cedula = CedulaAprendiz8 Entonces
+                                                            C8 <- "Aprobado";
+                                                        FinSi
+                                                    FinSi		
+                                                FinSi		
+                                            FinSi	
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                            leer Menu;	
+                            Limpiar Pantalla;
+                        FinSi
+                        
+                        Limpiar Pantalla;
+                        Si Menu = "3" Entonces
+                            Escribir "Consultar las Licencias Aprobadas y Licencias que no se  aprobaron ";
+                            Escribir " ";
+                            Escribir "1. Nombre ", Aprendiz1, " Cedula Ciudadania", CedulaAprendiz1 ;
+                            Escribir " Curso de Conducción ", C1; 
+                            Si C1 = "Aprobado" Entonces
+                                Escribir "se le Aprobo La licencia al Aprendiz"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                            FinSi
+                            
+                            Escribir " ";
+                            Escribir "2. Nombre ", Aprendiz2, " Cedula ", CedulaAprendiz2 ;
+                            Escribir "Curso de Conducción ", C2; 
+                            Si C2 = "Aprobado" Entonces
+                                Escribir "se le Aprobo La licencia al Aprendiz"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                            FinSi
+                            
+                            Escribir " ";
+                            Escribir "3. Nombre ", Aprendiz3, " Cedula ", CedulaAprendiz3 ;
+                            Escribir "Curso de Conducción ", C3; 
+                            Si C4 = "Aprobado" Entonces
+                                Escribir "se le Aprobo La licencia al Aprendiz"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                            FinSi
+                            Escribir " ";
+                            
+                            Escribir "4. Nombre ", Aprendiz4, " Cedula ", CedulaAprendiz4 ;
+                            Escribir "Curso de Conducción ", C4; 
+                            Si C4 = "Aprobado" Entonces
+                                Escribir "se le Aprobo La licencia al Aprendiz"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia";  	
+                            FinSi
+                            Escribir " ";
+                            
+                            Escribir "5. Nombre ", Aprendiz5, " Cedula", CedulaAprendiz5 ;
+                            Escribir "Curso de Conducción ", C5; 
+                            Si C5 = "Aprobado" Entonces
+                                Escribir "se le Aprobo La licencia al Aprendiz"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                            FinSi
+                            Escribir " ";
+                            
+                            Escribir "6. Nombre ", Aprendiz6, " Cedula ", CedulaAprendiz6 ;
+                            Escribir "Curso de Conducción ", C6; 
+                            Si C6= "Aprobado" Entonces
+                                Escribir "Cliente Aceptado para tener Licencia de Conducir"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                            FinSi
+                            Escribir " ";
+                            
+                            Escribir "7. Nombre ", Aprendiz7, " Cedula ", CedulaAprendiz7 ;
+                            Escribir "Curso de Conducción ", C7; 
+                            Si C7 = "Aprobado" Entonces
+                                Escribir "Cliente Aceptado para tener Licencia de Conducir"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                            FinSi
+                            Escribir " ";
+                            
+                            Escribir "8. Nombre ", Aprendiz8, " Cedula ", CedulaAprendiz8 ;
+                            Escribir "Curso de Conducción ", C8; 
+                            Si C8 = "Aprobado" Entonces
+                                Escribir "Cliente Aceptado para tener Licencia de Conducir"; 
+                            SiNo
+                                Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                            FinSi
+                            Escribir " ";
+                            Escribir "(ok) Para Continuar";
+                            leer Menu;	
+                            Limpiar Pantalla;
+                            
+                        FinSi	
+                        
+                    Hasta Que Menu = "4";	  
+                FinProceso
+            </pre>
+        </div>
+       </div>
+
+
+       <div class="itemp">  
+        <button class="acordeonp">VIDEO EXPLICATIVO</button>
+        <div class="panelp">
+            <h3>VIDEO EXPLICATIVO</h3>
+            <div style="text-align:center;" >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/z7ElvKadNGo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            
+        </div>
+       </div>
+       <script src="javasc.js"></script>
+</body>
+</html>

@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>talleres de PSeInt</title>
+    <link rel="stylesheet"href="stilops.css"/>
+</head>
+<body>
+    <br><br><h1 class="titulo">Taller 5 PSeInt funciones</h1><br><br>
+    <div class="itemp">  
+        <button class="acordeonp">TALLER DE CONDICIONALES EN MODO FUNCIONES</button>
+        <div class="panelp">
+
+            <div class="itemp">  
+                <button class="acordeonp">PRIMER PUNTO</button>
+                <div class="panelp">
+                    <img src="p6.jpg"class="imagen" alt="p6">
+                   <p class="texto">
+                    Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, 
+                    deberá mostrar en pantalla: Usted es mayor de edad.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_1funciones
+                            Definir edad Como Entero;
+                            edad <- capturaredad(); 
+                        FinProceso
+                        SubProceso edadperson <- capturaredad()
+                            Definir edadperson, edad Como Entero;
+                            Escribir "digite su edad ";
+                            leer edad;
+                            si edad >= 18 Entonces
+                                Escribir "usted es mayor de edad ";
+                            FinSi
+                        FinSubProceso
+                    </pre>
+                    
+                </div>
+               </div>
+        
+        
+               <div class="itemp">  
+                <button class="acordeonp">SEGUNDO PUNTO</button>
+                <div class="panelp">
+                    <img src="p7.jpg"class="imagen" alt="p7">
+                   <p class="texto">
+                    Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, 
+                    deberá mostrar en pantalla: Usted aún es un niño(a).
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_2funciones
+                            Definir edad Como Entero;
+                            edad <- capturaredad(); 
+                        FinProceso
+                        SubProceso edadperson <- capturaredad()
+                            Definir edadperson, edad Como Entero;
+                            Escribir "digite su edad ";
+                            leer edad;
+                            si edad >= 18 Entonces
+                                Escribir "usted es mayor de edad ";
+                            sino 
+                                Escribir "usted es un niño";
+                            FinSi
+                        FinSubProceso
+        
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">TERCER PUNTO</button>
+                <div class="panelp">
+                    <img src="p8.jpg"class="imagen" alt="p8">
+                   <p class="texto">
+                    Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona 
+                    es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de 
+                    edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, 
+                    deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede 
+                    entrar a la fiesta, por favor devuélvase a su casa.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_3funciones
+                            Definir datos Como Caracter;
+                            Dimension datos[3];
+                            
+                            datos[0] <- captura("digite su nombre");
+                            datos[1] <- captura("digite su apellido");
+                            datos[2] <- captura("digite su edad");
+                            imprimirdatos(datos);
+                        FinProceso
+                        SubProceso dato <- captura(mensaje)
+                            Definir dato Como Caracter;
+                            Escribir mensaje;
+                            leer dato;
+                        FinSubProceso
+
+                        SubProceso imprimirdatos(datos)
+                            Limpiar Pantalla;
+                            Escribir datos[0];
+                            Escribir datos[1];
+                            Escribir datos[2];
+                            si ConvertirANumero(datos[2]) >= 18 Entonces
+                                Escribir datos[0]," ",datos[1], " usted es mayor de edad por lo tanto puede entrar a la fiesta";
+                            SiNo
+                                Escribir datos[0]," ",datos[1], " usted es menor de edad por lo tanto no puede entrar a la fiesta por favor devuelvase a su casa";
+                            FinSi
+                        FinSubProceso
+                    </pre>
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">CUARTO PUNTO</button>
+                <div class="panelp">
+                    <img src="p9.jpg"class="imagen" alt="p9">
+                   <p class="texto">
+                    La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, 
+                    requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. 
+                    Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir
+                     película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños
+                    u otra novedad sobre la película.
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_4
+	
+                            Definir opcion Como Entero;
+                            Definir nombre_pelcula , mensaje Como Caracter;
+                            Definir si_no, novedades Como Caracter;
+                            definir respuesta Como Caracter;
+                            
+                            Escribir "Bienvenido a la video tienda del barrio porvenir por favor digite una opcion";
+                            Escribir "1. Alquilar pelicula";
+                            Escribir "2. Consultar peliculas disponibles";
+                            Escribir "3. Recibir pelicula en la videotienda";
+                            Escribir "4. realizar anotaciones en caso de daño u otras novedades de la pelicula";
+                            mensaje <- "gracias por utilizar nuestros servicios";
+                            Leer opcion;
+                            Segun opcion Hacer
+                                1:
+                                    Escribir "¿que pelicula desea alquilar?";
+                                    leer nombre_pelcula;
+                                2: 
+                                    Escribir "por el momento solo tenemos disponible la pelicula encanto ¿desea alquilarla?";
+                                    leer si_no;
+                                3:
+                                    Escribir "puede hacercarse a la tienda todos los dias de 8am a 6 pm";
+                                    leer si_no;
+                                4:
+                                    Escribir "escriba que novedades tiene sobre la pelicula alquilada";
+                                    leer novedades;
+                                De Otro Modo:
+                                    Escribir "la opcion elegida no es valida";
+                            FinSegun
+                            imprimirmensaje(mensaje);
+                        FinProceso
+
+                        SubProceso imprimirmensaje(mensaje)
+                            Escribir mensaje;
+                            
+                        FinSubProceso
+            
+                    </pre>
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">QUINTO PUNTO</button>
+                <div class="panelp">
+                    <img src="p10.jpg"class="imagen" alt="p10">
+                   <p class="texto">
+                    La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder 
+                    facturar los productos que vende a sus clientes y para ello, los productos tienen unas características 
+                    que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen
+                    las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se 
+                    presenten.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_5funciones 
+                            Definir opcion Como Entero;
+                            Definir nombre, devolucion,mensaje Como Caracter;
+                            Definir precio Como Logico;
+                            Escribir "Bienvenido a la drogueria mi salud escoja una opcion";
+                            Escribir "1. comprar un producto";
+                            Escribir "2. consultar precio de producto";
+                            Escribir "3. devolucion de un producto";
+                            mensaje <- "gracias por utilizar nuestros servicios";
+                            leer opcion;
+                            precio <- Falso;
+                            Segun opcion Hacer
+                                1:
+                                    Escribir "¿que producto quiere comprar?";
+                                    leer nombre;
+                                2: 
+                                    si precio = Verdadero Entonces
+                                        Escribir "el precio del producto ", nombre, " es 5000 cop";
+                                    SiNo
+                                        Escribir "para decirle el precio primero debe escribir el nombre del producto que desea comprar";
+                                        
+                                    FinSi
+                                    
+                                3:
+                                    Escribir "escriba por que quiere devolver el producto";
+                                    leer devolucion;
+                                De Otro Modo:
+                                    Escribir "la opcion elegida no es valida";
+                                    
+                                    
+                            FinSegun
+                            imprmirmensaje(mensaje);
+                        FinProceso
+                        SubProceso imprmirmensaje(mensaje)
+                            Escribir mensaje;
+                        FinSubProceso
+        
+                    </pre>
+                </div>
+               </div>
+               <div class="itemp">  
+                <button class="acordeonp">SEXTO PUNTO</button>
+                <div class="panelp">
+                    <img src="p11.jpg"class="imagen" alt="p11">
+                   <p class="texto">
+                    El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas 
+                    revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. 
+                    Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+                    También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el 
+                    mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_6funciones
+                            Definir opcion Como Entero;
+                            Definir nombre, observaciones, mensaje Como Caracter;
+                            Escribir "Bienvenido al taller de motos el maquinista";
+                            Escribir "1. registrar ingreso al taller";
+                            Escribir "2. consultar el registro de salida";
+                            Escribir "3. consultar los arreglos de su vehiculo";
+                            mensaje <- "gracias por utilizar nuestros servicios";
+                            leer opcion;
+                            Segun opcion Hacer
+                                1:
+                                    Escribir "realice las observaciones del ingreso del vehiculo";
+                                    leer observaciones;
+                                    Escribir "mas adelante podra consultar el registro de salida y los arreglos realizados a su vehiculo ";
+                                2:
+                                    Escribir "su vehiculo salio del taller el dia xx del mes xx del año xx y las novedades a tener en cuenta son xxx";
+                                    
+                                3:
+                                    Escribir "los arreglos que se le realizaron a su vehiculo fueron los siguientes: ";
+                                De Otro Modo:
+                                    Escribir "la opcion elegida no es valida";
+                                    
+                                    
+                            FinSegun
+                            imprimirmensaje(mensaje);
+                            
+                        FinProceso
+                        SubProceso imprimirmensaje(mensaje)
+                            Escribir mensaje;
+                        FinSubProceso
+        
+                    </pre>
+                    
+                </div>
+               </div>
+               <div class="itemp">  
+                <button class="acordeonp">SEPTIMO PUNTO</button>
+                <div class="panelp">
+                    <img src="p12.jpg"class="imagen" alt="12">
+                   <p class="texto">
+                    La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC
+                     (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para 
+                     cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno
+                      y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_7funciones
+                            Definir peso, estatura, imc Como real;
+                            Definir datos Como real;
+                            Escribir "digite su peso en kilogramos";
+                            leer peso;
+                            Escribir "digite su estatura en metros";
+                            leer estatura;
+                            imc <- peso / (estatura * estatura);
+                            imprimirdatos(imc);
+                        FinProceso
+                        SubProceso imprimirdatos(imc)
+
+                            si imc <= 18.5 Entonces
+                                Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene bajo peso";
+                            FinSi
+                            si imc >= 18.6 Entonces
+                                Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene peso normal";
+                            FinSi
+                            si imc >= 25.9 Entonces
+                                Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene sobrepeso";
+                            FinSi
+                            si imc >= 29.9 Entonces
+                                Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene obesidad";
+                            FinSi
+
+                        FinSubProceso
+                    </pre>
+                    
+                </div>
+               </div>
+               <div class="itemp">  
+                <button class="acordeonp">OCTAVO PUNTO</button>
+                <div class="panelp">
+                    <img src="p13.jpg"class="imagen" alt="p13">
+                   <p class="texto">
+                    El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar
+                     los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias
+                      como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los
+                       pedidos, las tortas disponibles y las ventas que se registren diariamente.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso PUNTO_8
+                            Definir nombre Como Caracter;
+                            Definir opcion, cantidad Como Entero;
+                            Escribir "bienvenido a la pasteleria don carlos ingresa tu nombre";
+                            leer nombre;
+                            Escribir "hola ", nombre, elija una opcion";
+                            Escribir "1. torta de chocolate 10 personas";
+                            Escribir "2. torta de chocolate 20 personas";
+                            Escribir "3. torta de chocolate 30 personas";
+                            Escribir "4. tota de vainilla 10 personas";
+                            Escribir "5. torta de vainilla 20 personas";
+                            Escribir "6. torta de vainilla 30 personas";
+                            Escribir "7. torta de helado 10 personas";
+                            Escribir "8. torta de helado 20 personas";
+                            Escribir "9. torta de helado 30 personas";
+                            Escribir "10. torta 3 leches 10 personas";
+                            Escribir "11. torta 3 leches 20 personas";
+                            Escribir "12. torta 3 leches 30 personas";
+                            leer opcion;
+                            Segun opcion Hacer
+                                1:
+                                    
+                                    Escribir "haz elegido la torta de chocolate para 10 personas";
+                                    Escribir "su costo es de 15,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 15,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 30,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 45,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 60,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 90,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 105,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 135,000 cop";
+                                    FinSi
+                                    
+                                2:
+                                    
+                                    Escribir "haz elegido la torta de chocolate para 20 personas";
+                                    Escribir "su costo es de 25,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 25,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 50,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 100,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 125,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 150,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 175,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 225,000 cop";
+                                    FinSi
+                                3:
+                                    
+                                    Escribir "haz elegido la torta de chocolate para 30 personas";
+                                    Escribir "su costo es de 40,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 40,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 80,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 160,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 240,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 280,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 320,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 360,000 cop";
+                                    FinSi
+                                4:
+                                    
+                                    Escribir "haz elegido la torta de vainilla para 10 personas";
+                                    Escribir "su costo es de 15,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 15,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 30,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 45,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 60,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 90,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 105,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 135,000 cop";
+                                    FinSi
+                                5:
+                                    
+                                    Escribir "haz elegido la torta de vainilla para 20 personas";
+                                    Escribir "su costo es de 25,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 25,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 50,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 100,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 125,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 150,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 175,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 225,000 cop";
+                                    FinSi
+                                6:
+                                    
+                                    Escribir "haz elegido la torta de vainilla para 30 personas";
+                                    Escribir "su costo es de 40,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 40,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 80,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 160,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 240,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 280,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 320,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 360,000 cop";
+                                    FinSi
+                                7:
+                                    
+                                    Escribir "haz elegido la torta de helado para 10 personas";
+                                    Escribir "su costo es de 15,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 15,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 30,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 45,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 60,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 90,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 105,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 135,000 cop";
+                                    FinSi
+                                8:
+                                    
+                                    Escribir "haz elegido la torta de helado para 20 personas";
+                                    Escribir "su costo es de 25,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 25,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 50,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 100,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 125,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 150,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 175,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 225,000 cop";
+                                    FinSi
+                                9:
+                                    
+                                    Escribir "haz elegido la torta de helado para 30 personas";
+                                    Escribir "su costo es de 40,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 40,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 80,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 160,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 240,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 280,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 320,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 360,000 cop";
+                                    FinSi
+                                10:
+                                    
+                                    Escribir "haz elegido la torta de 3 leches para 10 personas";
+                                    Escribir "su costo es de 15,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 15,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 30,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 45,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 60,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 90,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 105,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 135,000 cop";
+                                    FinSi
+                                11:
+                                    
+                                    Escribir "haz elegido la torta de 3 leches para 20 personas";
+                                    Escribir "su costo es de 25,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 25,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 50,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 75,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 100,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 125,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 150,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 175,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 225,000 cop";
+                                    FinSi
+                                12:
+                                    
+                                    Escribir "haz elegido la torta de 3 leches para 30 personas";
+                                    Escribir "su costo es de 40,000 cop/ cada una";
+                                    Escribir "seleccione cuantas tortas quiere";
+                                    leer cantidad;
+                                    si cantidad = 1 entonces
+                                        Escribir "el valor total de su compra es 40,000 cop";
+                                    FinSi
+                                    si cantidad = 2 Entonces
+                                        Escribir "el valor total de su compra es 80,000 cop";
+                                    FinSi
+                                    si cantidad = 3 Entonces
+                                        Escribir "el valor total de su compra es 120,000 cop";
+                                    FinSi
+                                    si cantidad = 4 Entonces
+                                        Escribir "el valor total de su compra es 160,000 cop";
+                                    FinSi
+                                    si cantidad = 5 Entonces
+                                        Escribir "el valor total de su compra es 200,000 cop";
+                                    FinSi
+                                    si cantidad = 6 Entonces
+                                        Escribir "el valor total de su compra es 240,000 cop";
+                                    FinSi
+                                    si cantidad = 7 Entonces
+                                        Escribir "el valor total de su compra es 280,000 cop";
+                                    FinSi
+                                    si cantidad = 8 Entonces
+                                        Escribir "el valor total de su compra es 320,000 cop";
+                                    FinSi
+                                    si cantidad = 9 Entonces
+                                        Escribir "el valor total de su compra es 360,000 cop";
+                                    FinSi
+                            FinSegun
+                            
+                            
+        
+        
+                        FinProceso
+                        SubProceso imprimirmensaje(mensaje)
+                            Escribir mensaje;
+                        FinSubProceso
+                    </pre>
+                    
+                </div>
+               </div>
+
+
+               <div class="itemp">  
+                <button class="acordeonp">NOVENO PUNTO</button>
+                <div class="panelp">
+                    <img src="p14.jpg"class="imagen" alt="p14">
+                   <p class="texto">
+                    El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes 
+                    figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores
+                     al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un 
+                     rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo 
+                     y mostrar su respectivo resultado.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso PUNTO_9
+                            Definir opcion Como Entero;
+                            Definir largo, ancho, base, altura, base_1, base_2,total Como Real;
+                            Escribir "seleccione que area desea calcular";
+                            Escribir "1. rectangulo";
+                            Escribir "2. triangulo";
+                            Escribir "3. trapecio";
+                            leer opcion;
+                            
+                            Segun opcion Hacer
+                                1:
+                                    Escribir "ingrese la medida del largo del rectangulo";
+                                    leer largo;
+                                    Escribir "ingrese la medida del ancho del rectangulo";
+                                    leer ancho;
+                                    total <- largo * ancho;
+                                    Escribir "el area de su rectangulo es: ", total;
+                                2: 
+                                    Escribir "ingrese la base del triangulo";
+                                    leer base;
+                                    Escribir "ingrese la altura del triangulo";
+                                    leer altura;
+                                    total <- base * altura;
+                                    Escribir "el area de su triangulo es: ", total;
+                                3:
+                                    Escribir "ingrese la base 1 del trapecio";
+                                    leer base_1;
+                                    Escribir "ingrese la base 2 del trapecio";
+                                    leer base_2;
+                                    Escribir "ingrese la altura del trapecio";
+                                    leer altura;
+                                    total <- (base_1+ base_2)/2*altura;
+                                    Escribir "el area de su trapecio es: ", total;
+                            FinSegun
+                        FinProceso
+        
+        
+                    </pre>
+                    
+                </div>
+               </div>
+
+
+               <div class="itemp">  
+                <button class="acordeonp">DECIMO PUNTO</button>
+                <div class="panelp">
+                    <img src="p15.jpg"class="imagen" alt="p15">
+                   <p class="texto">
+                    El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para
+                     llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y
+                    cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En 
+                    los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al
+                    valor que tiene en la cuenta.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_10funciones
+                            Definir titular, mensaje Como Caracter;
+                            Definir cuenta, saldo, retiro, deposito, opcion Como Entero;
+                            saldo <- 0;
+                            Escribir "bienvenido a su banco fiel selecione una opcion";
+                            mensaje <- " gracias por utilizar nuestros servicios";
+                            Repetir
+                                Escribir "1. deposito";
+                                Escribir "2. retiro";
+                                Escribir "3. consultar saldo";
+                                Escribir "4. salir";
+                                leer opcion;
+                                segun opcion Hacer
+                                    1:
+                                        Escribir "ha elegido depositar dinero por favor ingrese el numero de cuenta";
+                                        leer cuenta;
+                                        Escribir "ingrese el monto a depositar";
+                                        leer deposito;
+                                        si deposito < 5 Entonces
+                                            Escribir "por favor ingrese un valor mayor a 5 ";
+                                        SiNo
+                                            Escribir "transaccion exitosa gracias por utilizar nuestros servicios";
+                                        FinSi
+                                        saldo <- saldo + deposito;
+                                        Esperar 5 Segundos;
+                                        Limpiar Pantalla;
+                                    2:
+                                        Escribir "ha elegido retirar dinero por favor ingrese el numero de la cuenta";
+                                        leer cuenta;
+                                        Escribir "ingrese el monto a retirar";
+                                        leer retiro;
+                                        si retiro < saldo Entonces
+                                            Escribir "transaccion exitosa";
+                                        SiNo
+                                            Escribir "ingrese un valor menor o igual a su saldo";
+                                        FinSi
+                                        saldo <- saldo - retiro;
+                                        Esperar 5 Segundos;
+                                        Limpiar Pantalla;
+                                    3:
+                                        Escribir "su actual saldo es: ", saldo;
+                                        Esperar 5 Segundos;
+                                        Limpiar Pantalla;
+                                    4:
+                                        Escribir "adios";
+                                        
+                                        
+                                FinSegun
+                            Hasta Que opcion == 4
+                            imprimirmensaje(mensaje);
+                        FinProceso
+                        SubProceso imprimirmensaje(mensaje)
+                            Escribir mensaje;
+                            
+                        FinSubProceso
+                    </pre>
+                    
+                </div>
+               </div>
+            
+        </div>
+       </div>
+
+
+       <div class="itemp">  
+        <button class="acordeonp">PUNTOS 6, 7 Y 8 DEL TALLER DE CICLOS EN MODO FUNCIONES</button>
+        <div class="panelp">
+            <div class="itemp">  
+                <button class="acordeonp">SEXTO PUNTO</button>
+                <div class="panelp">
+                    <img src="p21.jpeg"class="imagen" alt="21">
+                   <p class="texto">
+                    Se está creando una aplicación que va a estar conectada con un prototipo que permita almacenar contactos 
+                    telefónicos en el dispositivo. Para ello cada contacto debe contener nombre completo, teléfono y 
+                    organización. Se requiere que la aplicación permita añadir 3 contactos verificando que el número no 
+                    esté almacenado, buscar contactos almacenados y eliminar contactos si el usuario lo requiere. Recuerde 
+                    que el sistema debe terminar cuando el usuario así lo indique.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_6
+                    Definir contacto1, contacto2, contacto3 Como Entero;
+                    Definir nombre,nombrecliente1, nombrecliente2 como caracter;
+                    Definir nombrecliente3,telefono1,telefono2 como caracter;
+                    Definir telefono3,organizacion1,organizacion2 como caracter;
+                    Definir organizacion3,Salir,Siguiente Como Caracter;
+
+                    Repetir
+                        escribir"Digita tu Nombre";
+                        leer nombre;
+                        Escribir "Aqui vas Agregar tus Contactos"; 
+                        contacto1 <- 1;
+                        Si contacto1 = 1 Entonces
+                            Escribir "Agrega tu Primer contacto ";
+                            Escribir "Numero de Telefono de tu Primer Contacto";
+                            Leer telefono1;
+                            Escribir "Nombre de tu Primer Contacto";
+                            Leer nombrecliente1;
+                            Escribir " Que organización Pertenece Tu Primer Contacto";
+                            Leer organizacion1;
+                            Escribir "";
+                            Escribir "¿Quieres Agregar Otro Contacto a Tu Libreta de Dirección?";
+                            Escribir "(Si)";
+                            Escribir "(No)";
+                            Leer Siguiente;
+                            Si Siguiente = "si" o Siguiente = "Si" Entonces 
+                                Limpiar Pantalla;
+                                Escribir "Numero de Telefono de tu Segundo Contacto";
+                                Leer telefono2;
+                                si telefono2 = telefono1 Entonces
+                                    Escribir "El Numero de Telefono Existe en esta Libreta";
+                                SiNo
+                                    Escribir "Nombre de tu Segundo Contacto";
+                                    Leer nombrecliente2;
+                                    Escribir "Que organización Pertenece Tu Segundo  Contacto";
+                                    Leer organizacion2;
+                                    Escribir "*********";
+                                    Escribir "¿Quieres Agregar Otro Contacto a Tu Libreta de Dirección?";
+                                    Escribir "(Si)";
+                                    Escribir "(No)";
+                                    Leer Siguiente;
+                                    Si Siguiente = "si" o Siguiente = "Si" Entonces
+                                        Limpiar Pantalla;
+                                        Escribir "Numero de Telefono de tu Tercer Contacto";
+                                        Leer telefono3;
+                                        si telefono3 = telefono1 o telefono3 = telefono2 Entonces
+                                            Escribir "El Numero de Telefono Existe en esta Libreta";
+                                        SiNo
+                                            Escribir "Nombre de tu Tercer Contacto";
+                                            Leer nombrecliente3;
+                                            Escribir "Que organización Pertenece Tu Tercer  Contacto";
+                                            Leer organizacion3;
+                                            Escribir "*******";
+                                            Escribir "SR(@) ",  nombre  ,"  Esto son los Contactos Guardados en la Libreta de Direccion";
+                                            Escribir "1. Teléfono: ", telefono1, ", Nombre: ", nombrecliente1, ", Organización " , organizacion1; 
+                                            Escribir "2. Teléfono: ", telefono2, ", Nombre: ", nombrecliente2, ", Organización " , organizacion2;
+                                            Escribir "3. Teléfono: ", telefono3, ", Nombre: ", nombrecliente3, ", Organización " , organizacion3;
+                                        FinSi
+                                    FinSi
+                                FinSi	
+                            FinSi
+                        FinSi
+                        Escribir "";
+                        Escribir "¿Desea Salir?";
+                        Escribir "(Si).";
+                        Escribir "(No).";
+                        Leer salir;
+                    Hasta Que salir = "Si" o salir = "si";
+                    
+                FinProceso
+        
+                    </pre>
+                </div>
+               </div>
+               <div class="itemp">  
+                <button class="acordeonp">SEPTIMO PUNTO</button>
+                <div class="panelp">
+                    <img src="p22.jpeg"class="imagen" alt="p22">
+                   <p class="texto">
+                    El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y 
+                    requiere una aplicación que permita registrar los vehículos que se cuidan en estas instalaciones. Se sugiere
+                    que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como 
+                    son nombre completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al 
+                    parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra en el parqueadero. Recuerde 
+                    que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo 
+                    puede almacenar máximo 5 vehículos.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_7
+                            Definir Capacidad, Ocupados, Menu , Cel Como Entero;
+                            Definir Placa,Cliente,Marca,ll Como Caracter;
+                            Capacidad<-5;
+                            Ocupados<-0;
+                            Repetir
+                                Limpiar Pantalla;
+                                Escribir "bienvenido al parquedero el guardian seleccione una opcion ";
+                                Escribir "   1. ingresar vehiculo";
+                                Escribir "   2. retirar vehiculo";
+                                Escribir "   3. consultar";
+                                Escribir "   4. Salir";
+                                Leer Menu;
+                                Segun Menu Hacer
+                                    1:
+                                        Si (Ocupados = 5) Entonces
+                                            Escribir "No hay estacionamiento disponible";
+                                        SiNo
+                                            Escribir "Su Nombre, por Favor";
+                                            leer Cliente;
+                                            escribir"Su Numero de Celular, porfavor";
+                                            leer Cel;
+                                            Escribir " Placa Vehículo, por Favor";
+                                            Leer Placa;
+                                            Escribir "Marca de su Vehiculo, por Favor";
+                                            Leer Marca;
+                                            Escribir "SR(@) ",Cliente," Su Vehiculo  con Placa ",Placa," de Marca  ", Marca," ha Ingresado al Parqueadero EL Guardian ";
+                                            Escribir "Placa Ingresada Exitosamente ", Placa;
+                                            Ocupados <- Ocupados+1;
+                                        FinSi
+                                    2:
+                                        Escribir "Ingresar Placa Vehículo";
+                                        Leer Placa;
+                                        Escribir "Placa que Sale: ", Placa;
+                                        Ocupados <- Ocupados-1;
+                                    3:
+                                        Escribir "El Número de estacionamientos ocupados es: ", Ocupados," con el vehiculo de placas ",Placa;
+                                        
+                                    4:
+                                        Escribir "Gracias, vuelva pronto";
+                                    De otro modo:
+                                        Escribir "Opción no válida";
+                                FinSegun
+                                Escribir "Presione enter para continuar";
+                                Esperar Tecla;
+                            Hasta Que menu=4
+                            
+                        FinProceso
+                    </pre>
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">OCTAVO PUNTO</button>
+                <div class="panelp">
+                    <img src="p23.jpeg"class="imagen" alt="p23">
+                   <p class="texto">
+                    La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en 
+                    los cursos de enseñanza automovilística y establecer quienes lo han aprobado para continuar con el trámite 
+                    de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, 
+                    consultar usuarios que hayan presentado el curso y resultados de la prueba del curso 
+                    (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
+                    Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_8
+                        Definir Aprendiz1, Aprendiz2, Aprendiz3, Aprendiz4 como caracter;
+                        Definir Aprendiz5, Aprendiz6, Aprendiz7, Aprendiz8 como caracter;
+                        Definir C1, C2, C3, C4, C5, C6, C7, C8  Como Caracter;
+                        Definir CedulaAprendiz1,CedulaAprendiz2,CedulaAprendiz3 como caracter;
+                        Definir CedulaAprendiz4,CedulaAprendiz5,CedulaAprendiz6 como caracter;
+                        Definir CedulaAprendiz7,CedulaAprendiz8  Como Caracter;
+                        
+                        Definir Menu, Cedula ,nombreadmi Como Caracter;
+                        Definir ingreso, aprobar Como Entero;
+                        Aprendiz1 <-" ";   
+                        Aprendiz2 <-" "; 
+                        Aprendiz3 <- "";
+                        Aprendiz4 <- ""; 
+                        Aprendiz5 <- ""; 
+                        Aprendiz6 <- "";
+                        Aprendiz7 <- "";
+                        Aprendiz8 <- "";
+                        CedulaAprendiz1 <- "Vacio"; 
+                        CedulaAprendiz2 <- "Vacio";
+                        CedulaAprendiz3 <- "Vacio"; 
+                        CedulaAprendiz4 <- "Vacio"; 
+                        CedulaAprendiz5 <- "Vacio"; 
+                        CedulaAprendiz6 <- "Vacio";
+                        CedulaAprendiz7 <- "Vacio"; 
+                        CedulaAprendiz8 <- "Vacio";
+                        C1 <- ""; 
+                        C2 <- "";
+                        C3 <- "";
+                        C4 <- "";
+                        C5 <- "";
+                        C6 <- "";
+                        C7 <- ""; 
+                        C8 <- "";
+                        
+                        escribir"Digita tu Nombre";
+                        leer nombreadmi;
+                        
+                        Escribir nombreadmi," bienvenido seleccione una opcion ";
+                        
+                        ingreso <- 0;
+                        Repetir	
+                            Escribir "1. Para ingresar un Estudiante";
+                            Escribir "2. Para Aprobar un Estudiante";
+                            Escribir "3. Consultar Licenciados";
+                            Escribir "4. Salir del Sistema";
+                            Leer Menu;
+                            Si Menu = "1" Entonces
+                                
+                                Escribir "Ingreso de Estudiantes para el curso de conducción";
+                                Si Aprendiz1 = "" Entonces
+                                    Escribir "Ingrese el Nombre del Estudiante";
+                                    Leer Aprendiz1;
+                                    Escribir "Ingrese el Cédula del Estudiante";
+                                    Leer CedulaAprendiz1;
+                                    C1 <- "Inscrito";
+                                SiNo
+                                    Si Aprendiz2 = "" Entonces
+                                        Escribir "Ingrese el Nombre del Estudiante";
+                                        Leer Aprendiz2;
+                                        Escribir "Ingrese el Cédula del Estudiante";
+                                        Leer CedulaAprendiz2;
+                                        C1 <- "Inscrito";
+                                    SiNO
+                                        Si Aprendiz3 = "" Entonces
+                                            Escribir "Ingrese el Nombre del Estudiante";
+                                            Leer Aprendiz3;
+                                            Escribir "Ingrese el Cédula del Estudiante";
+                                            Leer CedulaAprendiz3;
+                                            C3 <- "Inscrito";
+                                        SiNO
+                                            Si Aprendiz4 = "" Entonces
+                                                Escribir "Ingrese el Nombre del Estudiante";
+                                                Leer Aprendiz4;
+                                                Escribir "Ingrese el Cédula del Estudiante";
+                                                Leer CedulaAprendiz4;
+                                                C4 <- "Inscrito";
+                                            SiNO
+                                                Si Aprendiz5 = "" Entonces
+                                                    Escribir "Ingrese el Nombre del Estudiante";
+                                                    Leer Aprendiz5;
+                                                    Escribir "Ingrese el Cédula del Estudiante";
+                                                    Leer CedulaAprendiz5;
+                                                    C5 <- "Inscrito";
+                                                SiNO
+                                                    Si Aprendiz6 = "" Entonces
+                                                        Escribir "Ingrese el Nombre del Estudiante";
+                                                        Leer Aprendiz6;
+                                                        Escribir "Ingrese el Cédula del Estudiante";
+                                                        Leer  CedulaAprendiz6;
+                                                        C6 <- "Inscrito";
+                                                    SiNO
+                                                        Si Aprendiz7 = "" Entonces
+                                                            Escribir "Ingrese el Nombre del Estudiante";
+                                                            Leer Aprendiz7;
+                                                            Escribir "Ingrese el Cédula del Estudiante";
+                                                            Leer CedulaAprendiz7;
+                                                            C7 <- "Inscrito";
+                                                        SiNO
+                                                            Si Aprendiz8 = "" Entonces
+                                                                Escribir "Ingrese el Nombre del Estudiante";
+                                                                Leer Aprendiz8;
+                                                                Escribir "Ingrese el Cédula del Estudiante";
+                                                                Leer CedulaAprendiz8;
+                                                                C8 <- "Inscrito";
+                                                            FinSi
+                                                        FinSi
+                                                    FinSi
+                                                FinSi
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                            FinSi
+                            
+                            Si Menu = "2"  Entonces
+                                Escribir " Aprobar Licencia a Aprendiz";
+                                Escribir "";
+                                Escribir "Ingrese la Cédula del Aprendiz";
+                                Leer Cedula;
+                                Si Cedula = CedulaAprendiz1 Entonces
+                                    C1 <- "Aprobado";
+                                SiNo
+                                    Si Cedula = CedulaAprendiz2 Entonces
+                                        C2 <- "Aprobado";
+                                    SiNo
+                                        Si Cedula = CedulaAprendiz3 Entonces
+                                            C3 <- "Aprobado";
+                                        SiNo
+                                            Si Cedula = CedulaAprendiz4 Entonces
+                                                C4 <- "Aprobado";
+                                            SiNo
+                                                Si Cedula = CedulaAprendiz5 Entonces
+                                                    C5 <- "Aprobado";
+                                                SiNo
+                                                    Si Cedula = CedulaAprendiz6 Entonces
+                                                        
+                                                        C6<- "Aprobado";
+                                                    SiNo
+                                                        Si Cedula = CedulaAprendiz7 Entonces
+                                                            C7 <- "Aprobado";
+                                                        SiNo
+                                                            Si Cedula = CedulaAprendiz8 Entonces
+                                                                C8 <- "Aprobado";
+                                                            FinSi
+                                                        FinSi		
+                                                    FinSi		
+                                                FinSi	
+                                            FinSi
+                                        FinSi
+                                    FinSi
+                                FinSi
+                                leer Menu;	
+                                Limpiar Pantalla;
+                            FinSi
+                            
+                            Limpiar Pantalla;
+                            Si Menu = "3" Entonces
+                                Escribir "Consultar las Licencias Aprobadas y Licencias que no se  aprobaron ";
+                                Escribir " ";
+                                Escribir "1. Nombre ", Aprendiz1, " Cedula Ciudadania", CedulaAprendiz1 ;
+                                Escribir " Curso de Conducción ", C1; 
+                                Si C1 = "Aprobado" Entonces
+                                    Escribir "se le Aprobo La licencia al Aprendiz"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                                FinSi
+                                
+                                Escribir " ";
+                                Escribir "2. Nombre ", Aprendiz2, " Cedula ", CedulaAprendiz2 ;
+                                Escribir "Curso de Conducción ", C2; 
+                                Si C2 = "Aprobado" Entonces
+                                    Escribir "se le Aprobo La licencia al Aprendiz"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                                FinSi
+                                
+                                Escribir " ";
+                                Escribir "3. Nombre ", Aprendiz3, " Cedula ", CedulaAprendiz3 ;
+                                Escribir "Curso de Conducción ", C3; 
+                                Si C4 = "Aprobado" Entonces
+                                    Escribir "se le Aprobo La licencia al Aprendiz"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                                FinSi
+                                Escribir " ";
+                                
+                                Escribir "4. Nombre ", Aprendiz4, " Cedula ", CedulaAprendiz4 ;
+                                Escribir "Curso de Conducción ", C4; 
+                                Si C4 = "Aprobado" Entonces
+                                    Escribir "se le Aprobo La licencia al Aprendiz"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia";  	
+                                FinSi
+                                Escribir " ";
+                                
+                                Escribir "5. Nombre ", Aprendiz5, " Cedula", CedulaAprendiz5 ;
+                                Escribir "Curso de Conducción ", C5; 
+                                Si C5 = "Aprobado" Entonces
+                                    Escribir "se le Aprobo La licencia al Aprendiz"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                                FinSi
+                                Escribir " ";
+                                
+                                Escribir "6. Nombre ", Aprendiz6, " Cedula ", CedulaAprendiz6 ;
+                                Escribir "Curso de Conducción ", C6; 
+                                Si C6= "Aprobado" Entonces
+                                    Escribir "Cliente Aceptado para tener Licencia de Conducir"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                                FinSi
+                                Escribir " ";
+                                
+                                Escribir "7. Nombre ", Aprendiz7, " Cedula ", CedulaAprendiz7 ;
+                                Escribir "Curso de Conducción ", C7; 
+                                Si C7 = "Aprobado" Entonces
+                                    Escribir "Cliente Aceptado para tener Licencia de Conducir"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                                FinSi
+                                Escribir " ";
+                                
+                                Escribir "8. Nombre ", Aprendiz8, " Cedula ", CedulaAprendiz8 ;
+                                Escribir "Curso de Conducción ", C8; 
+                                Si C8 = "Aprobado" Entonces
+                                    Escribir "Cliente Aceptado para tener Licencia de Conducir"; 
+                                SiNo
+                                    Escribir "Aprendiz no paso el curso, pro tanto no tendra su licencia"; 
+                                FinSi
+                                Escribir " ";
+                                Escribir "(ok) Para Continuar";
+                                leer Menu;	
+                                Limpiar Pantalla;
+                                
+                            FinSi	
+                            
+                        Hasta Que Menu = "4";	  
+                    FinProceso
+                    </pre>
+                </div>
+               </div>
+
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">TODOS LOS PUNTOS DEL TALLER DE ARREGLOS EN MODO FUNCIONES</button>
+        <div class="panelp">
+            <div class="itemp">  
+                <button class="acordeonp">PRIMER PUNTO</button>
+                <div class="panelp">
+                    <img src="p24.jpeg"class="imagen" alt="p24">
+                   <p class="texto">
+                    Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después 
+                    de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor 
+                    de la siguiente manera:<br><br>
+                        [0] = 55<br>
+                        [1] = 99<br>
+                        [2] = 11<br>
+                        [3] = 56<br>
+                        [4] = 69<br>
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_14funciones
+                            Definir indice, indice2 Como Entero;
+                            definir num Como Caracter;
+                            definir numero_1, numero_2, numero_3, numero_4, numero_5 Como caracter;
+                            Dimension num[5];
+                            Para indice <- 0 Hasta 4 Con Paso 1 Hacer
+                                Escribir "digite un numero (", indice + 1 , ")";
+                                leer num[indice];
+                            FinPara
+                            indices(num);
+                            FinProceso
+                            SubProceso indices(num)
+                                Escribir num[0];
+                                Escribir num[1];
+                                Escribir num[2];
+                                Escribir num[3];
+                                Escribir num[4];
+                        FinSubProceso
+                    </pre>
+                    
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">SEGUNDO PUNTO</button>
+                <div class="panelp">
+                    <img src="p25.jpeg"class="imagen" alt="p25">
+                   <p class="texto">
+                    Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números 
+                    aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando 
+                    un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+                        Números pares: 2, 4, 6, 8, 10<br>
+                        Números impares: 1, 3, 5, 7, 9
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso programa_15funciones
+                        Definir num, dato Como Entero;
+                        Dimension num[20];
+                        num[0] <- Aleatorio(1,100);
+                        num[1] <- Aleatorio(1,100);
+                        num[2] <- Aleatorio(1,100);
+                        num[3] <- Aleatorio(1,100);
+                        num[4] <- Aleatorio(1,100);
+                        num[5] <- Aleatorio(1,100);
+                        num[6] <- Aleatorio(1,100);
+                        num[7] <- Aleatorio(1,100);
+                        num[8] <- Aleatorio(1,100);
+                        num[9] <- Aleatorio(1,100);
+                        num[10] <- Aleatorio(1,100);
+                        num[11] <- Aleatorio(1,100);
+                        num[12] <- Aleatorio(1,100);
+                        num[13] <- Aleatorio(1,100);
+                        num[14] <- Aleatorio(1,100);
+                        num[15] <- Aleatorio(1,100);
+                        num[16] <- Aleatorio(1,100);
+                        num[17] <- Aleatorio(1,100);
+                        num[18] <- Aleatorio(1,100);
+                        num[19] <- Aleatorio(1,100);
+                    
+                    
+                        indices(num);
+                        
+                    FinProceso
+                    SubProceso indices(num)
+                        si num[0] mod 2 = 0 Entonces
+                            Escribir num[0], " es un numero par";
+                        sino 
+                            Escribir num[0], " es un numero impar";
+                        FinSi
+                        si num[1] mod 2 = 0 Entonces
+                            Escribir num[1], " es un numero par";
+                        sino 
+                            Escribir num[1], " es un numero impar";
+                        FinSi
+                        si num[2] mod 2 = 0 Entonces
+                            Escribir num[2], " es un numero par";
+                        sino 
+                            Escribir num[2], " es un numero impar";
+                        FinSi
+                        si num[3] mod 2 = 0 Entonces
+                            Escribir num[3], " es un numero par";
+                        sino 
+                            Escribir num[3], " es un numero impar";
+                        FinSi
+                        si num[4] mod 2 = 0 Entonces
+                            Escribir num[4], " es un numero par";
+                        sino 
+                            Escribir num[4], " es un numero impar";
+                        FinSi
+                        si num[5] mod 2 = 0 Entonces
+                            Escribir num[5], " es un numero par";
+                        sino 
+                            Escribir num[5], " es un numero impar";
+                        FinSi
+                        si num[6] mod 2 = 0 Entonces
+                            Escribir num[6], " es un numero par";
+                        sino 
+                            Escribir num[6], " es un numero impar";
+                        FinSi
+                        si num[7] mod 2 = 0 Entonces
+                            Escribir num[7], " es un numero par";
+                        sino 
+                            Escribir num[7], " es un numero impar";
+                        FinSi
+                        si num[8] mod 2 = 0 Entonces
+                            Escribir num[8], " es un numero par";
+                        sino 
+                            Escribir num[8], " es un numero impar";
+                        FinSi
+                        si num[9] mod 2 = 0 Entonces
+                            Escribir num[9], " es un numero par";
+                        sino 
+                            Escribir num[9], " es un numero impar";
+                        FinSi
+                        si num[10] mod 2 = 0 Entonces
+                            Escribir num[10], " es un numero par";
+                        sino 
+                            Escribir num[10], " es un numero impar";
+                        FinSi
+                        si num[11] mod 2 = 0 Entonces
+                            Escribir num[11], " es un numero par";
+                        sino 
+                            Escribir num[11], " es un numero impar";
+                        FinSi
+                        si num[12] mod 2 = 0 Entonces
+                            Escribir num[12], " es un numero par";
+                        sino 
+                            Escribir num[12], " es un numero impar";
+                        FinSi
+                        si num[13] mod 2 = 0 Entonces
+                            Escribir num[13], " es un numero par";
+                        sino 
+                            Escribir num[13], " es un numero impar";
+                        FinSi
+                        si num[14] mod 2 = 0 Entonces
+                            Escribir num[14], " es un numero par";
+                        sino 
+                            Escribir num[14], " es un numero impar";
+                        FinSi
+                        si num[15] mod 2 = 0 Entonces
+                            Escribir num[15], " es un numero par";
+                        sino 
+                            Escribir num[15], " es un numero impar";
+                        FinSi
+                        si num[16] mod 2 = 0 Entonces
+                            Escribir num[16], " es un numero par";
+                        sino 
+                            Escribir num[16], " es un numero impar";
+                        FinSi
+                        si num[17] mod 2 = 0 Entonces
+                            Escribir num[17], " es un numero par";
+                        sino 
+                            Escribir num[17], " es un numero impar";
+                        FinSi
+                        si num[18] mod 2 = 0 Entonces
+                            Escribir num[18], " es un numero par";
+                        sino 
+                            Escribir num[18], " es un numero impar";
+                        FinSi
+                        si num[19] mod 2 = 0 Entonces
+                            Escribir num[19], " es un numero par";
+                        sino 
+                            Escribir num[19], " es un numero impar";
+                        FinSi
+                    FinSubProceso
+        
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">TERCER PUNTO</button>
+                <div class="panelp">
+                    <img src="p26.jpeg"class="imagen" alt="p26">
+                   <p class="texto">
+                    Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.
+                    
+                    </p>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso ARREGLO_3
+                            Definir x, n, c Como Entero;
+                            para n <- 1 Hasta 1000 Hacer
+                                x <- 1;
+                                c <- 0;
+                                mientras x <- n Hacer
+                                    si n mod x == 0 Entonces
+                                        c <- c + 1;
+                                    FinSi
+                                    x <- x + 1; 
+                                FinMientras
+                                si c == 2 Entonces
+                                    Escribir "el numero ", n, " es primo";
+                                FinSi
+                            FinPara
+                            Escribir c;
+                            
+                        FinProceso
+                    </pre>
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">CUARTO PUNTO</button>
+                <div class="panelp">
+                    <img src="p27.jpeg"class="imagen" alt="p27">
+                   <p class="texto">
+                    Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+                        01 02 03 04 05<br>
+                        06 07 08 09 10<br>
+                        11 12 13 14 15<br>
+                        16 17 18 19 20<br>
+                        Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.
+                        01 02 03 04 05<br>
+                        10 09 08 07 06<br>
+                        11 12 13 14 15<br>
+                        20 19 18 17 16<br>
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso ARREGLO_4
+                            Definir fila, columna, num, r Como Entero;
+                            Definir dato Como Caracter;
+                            r<- 01;
+                            Dimension dato[4,5];
+                            Dimension num[4,5];
+                            dato[0,0] <- "01";
+                            dato[0,1] <- "02";
+                            dato[0,2] <- "03";
+                            dato[0,3] <- "04";
+                            dato[0,4] <- "05";
+                            dato[1,0] <- "06";
+                            dato[1,1] <- "07";
+                            dato[1,2] <- "08";
+                            dato[1,3] <- "09";
+                            dato[1,4] <- "10";
+                            dato[2,0] <- "11";
+                            dato[2,1] <- "12";
+                            dato[2,2] <- "13";
+                            dato[2,3] <- "14";
+                            dato[2,4] <- "15";
+                            dato[3,0] <- "16";
+                            dato[3,1] <- "17";
+                            dato[3,2] <- "18";
+                            dato[3,3] <- "19";
+                            dato[3,4] <- "20";
+                            para fila <- 0 Hasta 3 Con Paso 1 hacer 
+                                para columna <- 0 hasta 4 con paso 1 Hacer
+                                    Escribir dato[fila,columna]," " Sin Saltar;
+                                FinPara
+                                Escribir " ";
+                            FinPara
+        
+                        FinProceso
+                    </pre>
+                </div>
+               </div>
+        
+               <div class="itemp">  
+                <button class="acordeonp">QUINTO PUNTO</button>
+                <div class="panelp">
+                    <img src="p28.jpeg"class="imagen" alt="p28">
+                   <p class="texto">
+                    Se debe de imprimir el siguiente cuadro
+                    El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda 
+                    debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y 
+                    columna insertada por el usuario
+                    </p>
+                    <img src="descarga.png"class="imagen2">
+                    <h3>CODIGO</h3>
+                    <pre>
+                        Proceso ARREGLO_5
+                            Definir fila, columna, num, opcion Como Entero;
+                            Definir dato Como caracter;
+                            Dimension dato[10,10];
+                            dato[0,0] <- "1 x 1= 1  ";
+                            dato[0,1] <- "2 x 1= 2  ";
+                            dato[0,2] <- "3 x 1= 3  ";
+                            dato[0,3] <- "4 x 1= 4  ";
+                            dato[0,4] <- "5 x 1= 5  ";
+                            dato[0,5] <- "6 x 1= 6  ";
+                            dato[0,6] <- "7 x 1= 7  ";
+                            dato[0,7] <- "8 x 1= 8  ";
+                            dato[0,8] <- "9 x 1= 9  ";
+                            dato[0,9] <- "10 x 1= 10";
+                            dato[1,0] <- "1 x 2= 2  ";
+                            dato[1,1] <- "2 x 2= 4  ";
+                            dato[1,2] <- "3 x 2= 6  ";
+                            dato[1,3] <- "4 x 2= 8  ";
+                            dato[1,4] <- "5 x 2= 10 ";
+                            dato[1,5] <- "6 x 2= 12 ";
+                            dato[1,6] <- "7 x 2= 14 ";
+                            dato[1,7] <- "8 x 2= 16 ";
+                            dato[1,8] <- "9 x 2= 18 ";
+                            dato[1,9] <- "10 x 2= 20";
+                            dato[2,0] <- "1 x 3= 3  ";
+                            dato[2,1] <- "2 x 3= 6  ";
+                            dato[2,2] <- "3 x 3= 9  ";
+                            dato[2,3] <- "4 x 3= 12 ";
+                            dato[2,4] <- "5 x 3= 15 ";
+                            dato[2,5] <- "6 x 3= 18 ";
+                            dato[2,6] <- "7 x 3= 21 ";
+                            dato[2,7] <- "8 x 3= 24 ";
+                            dato[2,8] <- "9 x 3= 27 ";
+                            dato[2,9] <- "10 x 3= 30";
+                            dato[3,0] <- "1 x 4= 4  ";
+                            dato[3,1] <- "2 x 4= 8  ";
+                            dato[3,2] <- "3 x 4= 12 ";
+                            dato[3,3] <- "4 x 4= 16 ";
+                            dato[3,4] <- "5 x 4= 20 ";
+                            dato[3,5] <- "6 x 4= 24 ";
+                            dato[3,6] <- "7 x 4= 28 ";
+                            dato[3,7] <- "8 x 4= 32 ";
+                            dato[3,8] <- "9 x 4= 36 ";
+                            dato[3,9] <- "10 x 4= 40";
+                            dato[4,0] <- "1 x 5= 5  ";
+                            dato[4,1] <- "2 x 5= 10 ";
+                            dato[4,2] <- "3 x 5= 15 ";
+                            dato[4,3] <- "4 x 5= 20 ";
+                            dato[4,4] <- "5 x 5= 25 ";
+                            dato[4,5] <- "6 x 5= 30 ";
+                            dato[4,6] <- "7 x 5= 35 ";
+                            dato[4,7] <- "8 x 5= 40 ";
+                            dato[4,8] <- "9 x 5= 45 ";
+                            dato[4,9] <- "10 x 5= 50";
+                            dato[5,0] <- "1 x 6= 6  ";
+                            dato[5,1] <- "2 x 6= 12 ";
+                            dato[5,2] <- "3 x 6= 18 ";
+                            dato[5,3] <- "4 x 6= 24 ";
+                            dato[5,4] <- "5 x 6= 30 ";
+                            dato[5,5] <- "6 x 6= 36 ";
+                            dato[5,6] <- "7 x 6= 42 ";
+                            dato[5,7] <- "8 x 6= 48 ";
+                            dato[5,8] <- "9 x 6= 54 ";
+                            dato[5,9] <- "10 x 6= 60";
+                            dato[6,0] <- "1 x 7= 7  ";
+                            dato[6,1] <- "2 x 7= 14 ";
+                            dato[6,2] <- "3 x 7= 21 ";
+                            dato[6,3] <- "4 x 7= 28 ";
+                            dato[6,4] <- "5 x 7= 35 ";
+                            dato[6,5] <- "6 x 7= 42 ";
+                            dato[6,6] <- "7 x 7= 49 ";
+                            dato[6,7] <- "8 x 7= 56 ";
+                            dato[6,8] <- "9 x 7= 63 ";
+                            dato[6,9] <- "10 x 7= 70";
+                            dato[7,0] <- "1 x 8= 8  ";
+                            dato[7,1] <- "2 x 8= 16 ";
+                            dato[7,2] <- "3 x 8= 24 ";
+                            dato[7,3] <- "4 x 8= 32 ";
+                            dato[7,4] <- "5 x 8= 40 ";
+                            dato[7,5] <- "6 x 8= 48 ";
+                            dato[7,6] <- "7 x 8= 56 ";
+                            dato[7,7] <- "8 x 8= 64 ";
+                            dato[7,8] <- "9 x 8= 72 ";
+                            dato[7,9] <- "10 x 8= 80";
+                            dato[8,0] <- "1 x 9= 9  ";
+                            dato[8,1] <- "2 x 9= 18 ";
+                            dato[8,2] <- "3 x 9= 27 ";
+                            dato[8,3] <- "4 x 9= 36 ";
+                            dato[8,4] <- "5 x 9= 45 ";
+                            dato[8,5] <- "6 x 9= 54 ";
+                            dato[8,6] <- "7 x 9= 63 ";
+                            dato[8,7] <- "8 x 9= 72 ";
+                            dato[8,8] <- "9 x 9= 81 ";
+                            dato[8,9] <- "10 x 9= 90";
+                            dato[9,0] <- "1 x10= 10 ";
+                            dato[9,1] <- "2 x10= 20 ";
+                            dato[9,2] <- "3 x10= 30 ";
+                            dato[9,3] <- "4 x10= 40 ";
+                            dato[9,4] <- "5 x10= 50 ";
+                            dato[9,5] <- "6 x10= 60 ";
+                            dato[9,6] <- "7 x10= 70 ";
+                            dato[9,7] <- "8 x10= 80 ";
+                            dato[9,8] <- "9 x10= 90 ";
+                            dato[9,9] <- "10 x10= 100";
+                            para fila <- 0 Hasta 9 Con Paso 1 hacer 
+                                para columna <- 0 hasta 9 con paso 1 Hacer
+                                    Escribir dato[fila,columna]," " Sin Saltar;
+                                FinPara
+                                Escribir " ";
+                            FinPara
+                        FinProceso
+                    </pre>
+                </div>
+               </div>
+        </div>
+       </div>
+       <script src="javasc.js"></script>
+</body>
+</html>

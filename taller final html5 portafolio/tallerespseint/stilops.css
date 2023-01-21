@@ -1,0 +1,56 @@
+body{
+    background-image: url('descarga_fondo6.jpg');
+    background-size: 100%;
+    background-repeat: repeat-y;
+
+}
+.acordeonp{
+    background-color: powderblue(247, 188, 80);
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+}
+.active,.acordeonp{
+    background-color: rgb(49, 91, 105);
+
+}
+.panelp{
+    padding: 0px 20px;
+    display: none;
+    background-color: transparent;
+    overflow: hidden;
+}
+.imagen{
+    padding: 2px; 
+    margin: 10px; 
+    border: 2px solid white; 
+    float: right; 
+    width: 550px;
+    height: 250px;
+}
+.imagen2{
+    padding: 2px; 
+    margin: 10px; 
+    border: 2px solid white; 
+    width: 550px;
+    height: 250px;
+}
+.titulo{
+    text-align: center;
+    color: white;
+
+}
+.texto{
+    color: white;
+}
+pre{
+    color: white;
+}
+h3{
+    color: white;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>talleres de java</title>
+    <link rel="stylesheet"href="stilotj.css"/>
+</head>
+<body>
+    <br><br><h1 class="titulo">TALLER 1 JAVA</h1><br><br>
+    <div class="itemj">  
+        <button class="acordeonj">PRIMER PUNTO</button>
+        <div class="panelj">
+            <img src="j1.jpeg"class="imagen" alt="j1">
+           <p class="texto">
+            Realizar un programa el cual solicite su nombre y apellidos.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                
+                import java.util.Scanner;
+                public class Main
+
+                {
+                    public static void main(String[] args) {
+                        Scanner nombres = new Scanner(System.in);
+                        System.out.println("por favor digite su nombre");
+                        String nombre=nombres.next();
+                        System.out.println("por favor digite su apellido");
+                        String apellido=nombres.next();
+                        System.out.println("su nombre es "+ nombre +" y su apellido es "+ apellido);
+                        
+                        
+                    }
+                }
+            </pre>
+            
+        </div>
+       </div>
+
+       <div class="itemj">  
+        <button class="acordeonj">SEGUNDO PUNTO</button>
+        <div class="panelj">
+            <img src="j2.jpeg"class="imagen" alt="j2">
+           <p class="texto">
+            Realizar un programa el cual solicite su nombre, apellidos, edad y estatura.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                
+                import java.util.Scanner;
+                public class Main
+
+                {
+                    public static void main(String[] args) {
+                        Scanner nombres = new Scanner(System.in);
+                        System.out.println("por favor digite su nombre");
+                        String nombre=nombres.next();
+                        System.out.println("por favor digite su apellido");
+                        String apellido=nombres.next();
+                        System.out.println("por favor digite su edad");
+                        int edad=nombres.nextInt();
+                        System.out.println("por favor digite su estatura");
+                        double estatura=nombres.nextDouble();
+                        System.out.println("su nombre es "+ nombre +" su apellido es "+ apellido+" su edad es "+edad+" y su estatura es "+estatura);
+                        
+                        
+                    }
+                }
+
+        </div>
+       </div>
+
+       <div class="itemj">  
+        <button class="acordeonj">TERCER PUNTO</button>
+        <div class="panelj">
+            <img src="j3.jpeg"class="imagen" alt="j3">
+           <p class="texto">
+            Realizar un programa el cual solicite su nombre y apellidos, también debe capturar nombre y apellidos de 
+            su padre y madre. Al finalizar debe imprimir en pantalla el siguiente mensaje "Yo [Nombre Completo], 
+            soy hijo de [Nombre de la Madre] y [Nombre del Padre].
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                        public static void main(String[] args) {
+                            Scanner nombres = new Scanner(System.in);
+                            System.out.println("por favor digite su nombre");
+                            String nombre=nombres.next();
+                            System.out.println("por favor digite su apellido");
+                            String apellido=nombres.next();
+                            System.out.println("por favor digite el nombre de su padre");
+                            String nombre_padre=nombres.next();
+                            System.out.println("por favor digite el apellido de su padre");
+                            String apellido_padre=nombres.next();
+                            System.out.println("por favor digite el nombre de su madre");
+                            String nombre_madre=nombres.next();
+                            System.out.println("por favor digite el apellido de su madre");
+                            String apellido_madre=nombres.next();
+                            System.out.println("yo "+ nombre +" "+ apellido+" soy hijo de "+nombre_madre+" "+apellido_madre+" y "+nombre_padre+" "+apellido_padre);
+                            
+                            
+                        }
+                    }
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemj">  
+        <button class="acordeonj">CUARTO PUNTO</button>
+        <div class="panelj">
+            <img src="j4.jpeg"class="imagen" alt="j4">
+           <p class="texto">
+            Realizar un programa el cual solicite el nombre de una ciudad capital y el país. Al finalizar debe imprimir 
+            en pantalla el siguiente mensaje "La ciudad [Nombre de la Ciudad], es la capital del país [Nombre del País]
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                        public static void main(String[] args) {
+                            Scanner nombres = new Scanner(System.in);
+                            System.out.println("por favor digite el nombre de la ciudad capital");
+                            String ciudad=nombres.next();
+                            System.out.println("por favor digite el nombre del pais");
+                            String pais=nombres.next();
+                            System.out.println("la ciudad "+ ciudad +" el la capital del pais "+ pais);
+                            
+                            
+                        }
+                    }
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemj">  
+        <button class="acordeonj">QUINTO PUNTO</button>
+        <div class="panelj">
+            <img src="j5.jpeg"class="imagen" alt="j5">
+           <p class="texto">
+            Realizar un programa el cual solicite el nombre de su mascota, edad de la mascota, el tipo de mascota y su 
+            nombre completo. Al finalizar el sistema debe e imprimir en pantalla el siguiente mensaje: [Nombre de Mascota]
+             es un(a) [Tipo de Mascota], el cual, tiene [Edad de la Mascota] años de edad y [Nombre Completo] es 
+             actualmente su dueño(a).
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                        public static void main(String[] args) {
+                            Scanner nombres = new Scanner(System.in);
+                            System.out.println("por favor digite el nombre de su mascota");
+                            String mascota=nombres.next();
+                            System.out.println("por favor digite la edad de su mascota");
+                            int edad=nombres.nextInt();
+                            System.out.println("por favor digite el tipo de mascota que tiene");
+                            String tipo=nombres.next();
+                            System.out.println("por favor digite su nombre");
+                            String nombre=nombres.next();
+                            System.out.println("por favor digite su apellido");
+                            String apellido=nombres.next();
+                            System.out.println(mascota+ " es un " +tipo+" el cual tiene " +edad+" años de edad y "+nombre+" "+apellido+" es actualmente su dueño");
+                            
+                            
+                        }
+                    }
+            </pre>
+        </div>
+       </div>
+       <script src="javatj.js"></script>
+</body>
+</html>

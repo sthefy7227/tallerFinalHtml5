@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>talleres de PSeInt</title>
+    <link rel="stylesheet"href="stilops.css"/>
+</head>
+<body>
+    <br><br><h1 class="titulo">Taller 4 PSeInt arreglos</h1><br><br>
+    <div class="itemp">  
+        <button class="acordeonp">PRIMER PUNTO</button>
+        <div class="panelp">
+            <img src="p24.jpeg"class="imagen" alt="p24">
+           <p class="texto">
+            Crear un vector de tipo Entero con 5 posiciones, llenarlo con información solicitada al usuario. Después 
+            de recoger toda la información, se requiere imprimir el índice de cada posición en el arreglo con su valor 
+            de la siguiente manera:<br><br>
+                [0] = 55<br>
+                [1] = 99<br>
+                [2] = 11<br>
+                [3] = 56<br>
+                [4] = 69<br>
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso ARREGLO_1
+                    Definir indice, indice2 Como Entero;
+                    definir num Como Caracter;
+                    definir numero_1, numero_2, numero_3, numero_4, numero_5 Como caracter;
+                    Dimension num[5];
+                    Para indice <- 0 Hasta 4 Con Paso 1 Hacer
+                        Escribir "digite un numero (", indice + 1 , ")";
+                        leer num[indice];
+
+                    FinPara
+                    Escribir [1] ;
+                    Escribir [2] ;
+                    Escribir [3] ;
+                    Escribir [4] ;
+                    Escribir [5] ;
+                    
+                FinProceso
+            </pre>
+            
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">SEGUNDO PUNTO</button>
+        <div class="panelp">
+            <img src="p25.jpeg"class="imagen" alt="p25">
+           <p class="texto">
+            Crear un arreglo de números enteros de 20 posiciones, el cual, debe ser llenado con números 
+            aleatorios entre 1 y 100; después de haber llenado dicho arreglo, se debe volver a recorrer utilizando 
+            un ciclo diferente al que se usó para llenarse e imprimir los números pares e impares. Ejemplo<br>
+                Números pares: 2, 4, 6, 8, 10<br>
+                Números impares: 1, 3, 5, 7, 9
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso ARREGLO_2
+                    Definir num, dato Como Entero;
+                    Dimension num[20];
+                    num[0] <- Aleatorio(1,100);
+                    num[1] <- Aleatorio(1,100);
+                    num[2] <- Aleatorio(1,100);
+                    num[3] <- Aleatorio(1,100);
+                    num[4] <- Aleatorio(1,100);
+                    num[5] <- Aleatorio(1,100);
+                    num[6] <- Aleatorio(1,100);
+                    num[7] <- Aleatorio(1,100);
+                    num[8] <- Aleatorio(1,100);
+                    num[9] <- Aleatorio(1,100);
+                    num[10] <- Aleatorio(1,100);
+                    num[11] <- Aleatorio(1,100);
+                    num[12] <- Aleatorio(1,100);
+                    num[13] <- Aleatorio(1,100);
+                    num[14] <- Aleatorio(1,100);
+                    num[15] <- Aleatorio(1,100);
+                    num[16] <- Aleatorio(1,100);
+                    num[17] <- Aleatorio(1,100);
+                    num[18] <- Aleatorio(1,100);
+                    num[19] <- Aleatorio(1,100);
+                    si num[0] mod 2 = 0 Entonces
+                        Escribir num[0], " es un numero par";
+                    sino 
+                        Escribir num[0], " es un numero impar";
+                    FinSi
+                    si num[1] mod 2 = 0 Entonces
+                        Escribir num[1], " es un numero par";
+                    sino 
+                        Escribir num[1], " es un numero impar";
+                    FinSi
+                    si num[2] mod 2 = 0 Entonces
+                        Escribir num[2], " es un numero par";
+                    sino 
+                        Escribir num[2], " es un numero impar";
+                    FinSi
+                    si num[3] mod 2 = 0 Entonces
+                        Escribir num[3], " es un numero par";
+                    sino 
+                        Escribir num[3], " es un numero impar";
+                    FinSi
+                    si num[4] mod 2 = 0 Entonces
+                        Escribir num[4], " es un numero par";
+                    sino 
+                        Escribir num[4], " es un numero impar";
+                    FinSi
+                    si num[5] mod 2 = 0 Entonces
+                        Escribir num[5], " es un numero par";
+                    sino 
+                        Escribir num[5], " es un numero impar";
+                    FinSi
+                    si num[6] mod 2 = 0 Entonces
+                        Escribir num[6], " es un numero par";
+                    sino 
+                        Escribir num[6], " es un numero impar";
+                    FinSi
+                    si num[7] mod 2 = 0 Entonces
+                        Escribir num[7], " es un numero par";
+                    sino 
+                        Escribir num[7], " es un numero impar";
+                    FinSi
+                    si num[8] mod 2 = 0 Entonces
+                        Escribir num[8], " es un numero par";
+                    sino 
+                        Escribir num[8], " es un numero impar";
+                    FinSi
+                    si num[9] mod 2 = 0 Entonces
+                        Escribir num[9], " es un numero par";
+                    sino 
+                        Escribir num[9], " es un numero impar";
+                    FinSi
+                    si num[10] mod 2 = 0 Entonces
+                        Escribir num[10], " es un numero par";
+                    sino 
+                        Escribir num[10], " es un numero impar";
+                    FinSi
+                    si num[11] mod 2 = 0 Entonces
+                        Escribir num[11], " es un numero par";
+                    sino 
+                        Escribir num[11], " es un numero impar";
+                    FinSi
+                    si num[12] mod 2 = 0 Entonces
+                        Escribir num[12], " es un numero par";
+                    sino 
+                        Escribir num[12], " es un numero impar";
+                    FinSi
+                    si num[13] mod 2 = 0 Entonces
+                        Escribir num[13], " es un numero par";
+                    sino 
+                        Escribir num[13], " es un numero impar";
+                    FinSi
+                    si num[14] mod 2 = 0 Entonces
+                        Escribir num[14], " es un numero par";
+                    sino 
+                        Escribir num[14], " es un numero impar";
+                    FinSi
+                    si num[15] mod 2 = 0 Entonces
+                        Escribir num[15], " es un numero par";
+                    sino 
+                        Escribir num[15], " es un numero impar";
+                    FinSi
+                    si num[16] mod 2 = 0 Entonces
+                        Escribir num[16], " es un numero par";
+                    sino 
+                        Escribir num[16], " es un numero impar";
+                    FinSi
+                    si num[17] mod 2 = 0 Entonces
+                        Escribir num[17], " es un numero par";
+                    sino 
+                        Escribir num[17], " es un numero impar";
+                    FinSi
+                    si num[18] mod 2 = 0 Entonces
+                        Escribir num[18], " es un numero par";
+                    sino 
+                        Escribir num[18], " es un numero impar";
+                    FinSi
+                    si num[19] mod 2 = 0 Entonces
+                        Escribir num[19], " es un numero par";
+                    sino 
+                        Escribir num[19], " es un numero impar";
+                    FinSi
+                    
+                FinProceso
+
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">TERCER PUNTO</button>
+        <div class="panelp">
+            <img src="p26.jpeg"class="imagen" alt="p26">
+           <p class="texto">
+            Imprimir los números primos del 1 al 1000, el resultado debe ser buscado de forma matemática.
+            
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso ARREGLO_3
+                    Definir x, n, c Como Entero;
+                    para n <- 1 Hasta 1000 Hacer
+                        x <- 1;
+                        c <- 0;
+                        mientras x <- n Hacer
+                            si n mod x == 0 Entonces
+                                c <- c + 1;
+                            FinSi
+                            x <- x + 1; 
+                        FinMientras
+                        si c == 2 Entonces
+                            Escribir "el numero ", n, " es primo";
+                        FinSi
+                    FinPara
+                    Escribir c;
+                    
+                FinProceso
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">CUARTO PUNTO</button>
+        <div class="panelp">
+            <img src="p27.jpeg"class="imagen" alt="p27">
+           <p class="texto">
+            Dada la siguiente matriz bidimensional, el cual debe de quemar en el código<br>
+                01 02 03 04 05<br>
+                06 07 08 09 10<br>
+                11 12 13 14 15<br>
+                16 17 18 19 20<br>
+                Utilizando el conocimiento adquirido, a excepción de hacerlo de forma manual, imprima la siguiente matriz bidimensional.
+                01 02 03 04 05<br>
+                10 09 08 07 06<br>
+                11 12 13 14 15<br>
+                20 19 18 17 16<br>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso ARREGLO_4
+	                Definir fila, columna, num, r Como Entero;
+                    Definir dato Como Caracter;
+                    r<- 01;
+                    Dimension dato[4,5];
+                    Dimension num[4,5];
+                    dato[0,0] <- "01";
+                    dato[0,1] <- "02";
+                    dato[0,2] <- "03";
+                    dato[0,3] <- "04";
+                    dato[0,4] <- "05";
+                    dato[1,0] <- "06";
+                    dato[1,1] <- "07";
+                    dato[1,2] <- "08";
+                    dato[1,3] <- "09";
+                    dato[1,4] <- "10";
+                    dato[2,0] <- "11";
+                    dato[2,1] <- "12";
+                    dato[2,2] <- "13";
+                    dato[2,3] <- "14";
+                    dato[2,4] <- "15";
+                    dato[3,0] <- "16";
+                    dato[3,1] <- "17";
+                    dato[3,2] <- "18";
+                    dato[3,3] <- "19";
+                    dato[3,4] <- "20";
+                    para fila <- 0 Hasta 3 Con Paso 1 hacer 
+                        para columna <- 0 hasta 4 con paso 1 Hacer
+                            Escribir dato[fila,columna]," " Sin Saltar;
+                        FinPara
+                        Escribir " ";
+                    FinPara
+
+                FinProceso
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">QUINTO PUNTO</button>
+        <div class="panelp">
+            <img src="p28.jpeg"class="imagen" alt="p28">
+           <p class="texto">
+            Se debe de imprimir el siguiente cuadro
+            El usuario deberá insertar la fila y columna de la cual desea ver el resultado, el resultado de cada celda 
+            debe estar previamente calculado en una matriz bidimensional la cual cada resultado obedecerá a la fila y 
+            columna insertada por el usuario
+            </p>
+            <img src="descarga.png"class="imagen2">
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso ARREGLO_5
+                    Definir fila, columna, num, opcion Como Entero;
+                    Definir dato Como caracter;
+                    Dimension dato[10,10];
+                    dato[0,0] <- "1 x 1= 1  ";
+                    dato[0,1] <- "2 x 1= 2  ";
+                    dato[0,2] <- "3 x 1= 3  ";
+                    dato[0,3] <- "4 x 1= 4  ";
+                    dato[0,4] <- "5 x 1= 5  ";
+                    dato[0,5] <- "6 x 1= 6  ";
+                    dato[0,6] <- "7 x 1= 7  ";
+                    dato[0,7] <- "8 x 1= 8  ";
+                    dato[0,8] <- "9 x 1= 9  ";
+                    dato[0,9] <- "10 x 1= 10";
+                    dato[1,0] <- "1 x 2= 2  ";
+                    dato[1,1] <- "2 x 2= 4  ";
+                    dato[1,2] <- "3 x 2= 6  ";
+                    dato[1,3] <- "4 x 2= 8  ";
+                    dato[1,4] <- "5 x 2= 10 ";
+                    dato[1,5] <- "6 x 2= 12 ";
+                    dato[1,6] <- "7 x 2= 14 ";
+                    dato[1,7] <- "8 x 2= 16 ";
+                    dato[1,8] <- "9 x 2= 18 ";
+                    dato[1,9] <- "10 x 2= 20";
+                    dato[2,0] <- "1 x 3= 3  ";
+                    dato[2,1] <- "2 x 3= 6  ";
+                    dato[2,2] <- "3 x 3= 9  ";
+                    dato[2,3] <- "4 x 3= 12 ";
+                    dato[2,4] <- "5 x 3= 15 ";
+                    dato[2,5] <- "6 x 3= 18 ";
+                    dato[2,6] <- "7 x 3= 21 ";
+                    dato[2,7] <- "8 x 3= 24 ";
+                    dato[2,8] <- "9 x 3= 27 ";
+                    dato[2,9] <- "10 x 3= 30";
+                    dato[3,0] <- "1 x 4= 4  ";
+                    dato[3,1] <- "2 x 4= 8  ";
+                    dato[3,2] <- "3 x 4= 12 ";
+                    dato[3,3] <- "4 x 4= 16 ";
+                    dato[3,4] <- "5 x 4= 20 ";
+                    dato[3,5] <- "6 x 4= 24 ";
+                    dato[3,6] <- "7 x 4= 28 ";
+                    dato[3,7] <- "8 x 4= 32 ";
+                    dato[3,8] <- "9 x 4= 36 ";
+                    dato[3,9] <- "10 x 4= 40";
+                    dato[4,0] <- "1 x 5= 5  ";
+                    dato[4,1] <- "2 x 5= 10 ";
+                    dato[4,2] <- "3 x 5= 15 ";
+                    dato[4,3] <- "4 x 5= 20 ";
+                    dato[4,4] <- "5 x 5= 25 ";
+                    dato[4,5] <- "6 x 5= 30 ";
+                    dato[4,6] <- "7 x 5= 35 ";
+                    dato[4,7] <- "8 x 5= 40 ";
+                    dato[4,8] <- "9 x 5= 45 ";
+                    dato[4,9] <- "10 x 5= 50";
+                    dato[5,0] <- "1 x 6= 6  ";
+                    dato[5,1] <- "2 x 6= 12 ";
+                    dato[5,2] <- "3 x 6= 18 ";
+                    dato[5,3] <- "4 x 6= 24 ";
+                    dato[5,4] <- "5 x 6= 30 ";
+                    dato[5,5] <- "6 x 6= 36 ";
+                    dato[5,6] <- "7 x 6= 42 ";
+                    dato[5,7] <- "8 x 6= 48 ";
+                    dato[5,8] <- "9 x 6= 54 ";
+                    dato[5,9] <- "10 x 6= 60";
+                    dato[6,0] <- "1 x 7= 7  ";
+                    dato[6,1] <- "2 x 7= 14 ";
+                    dato[6,2] <- "3 x 7= 21 ";
+                    dato[6,3] <- "4 x 7= 28 ";
+                    dato[6,4] <- "5 x 7= 35 ";
+                    dato[6,5] <- "6 x 7= 42 ";
+                    dato[6,6] <- "7 x 7= 49 ";
+                    dato[6,7] <- "8 x 7= 56 ";
+                    dato[6,8] <- "9 x 7= 63 ";
+                    dato[6,9] <- "10 x 7= 70";
+                    dato[7,0] <- "1 x 8= 8  ";
+                    dato[7,1] <- "2 x 8= 16 ";
+                    dato[7,2] <- "3 x 8= 24 ";
+                    dato[7,3] <- "4 x 8= 32 ";
+                    dato[7,4] <- "5 x 8= 40 ";
+                    dato[7,5] <- "6 x 8= 48 ";
+                    dato[7,6] <- "7 x 8= 56 ";
+                    dato[7,7] <- "8 x 8= 64 ";
+                    dato[7,8] <- "9 x 8= 72 ";
+                    dato[7,9] <- "10 x 8= 80";
+                    dato[8,0] <- "1 x 9= 9  ";
+                    dato[8,1] <- "2 x 9= 18 ";
+                    dato[8,2] <- "3 x 9= 27 ";
+                    dato[8,3] <- "4 x 9= 36 ";
+                    dato[8,4] <- "5 x 9= 45 ";
+                    dato[8,5] <- "6 x 9= 54 ";
+                    dato[8,6] <- "7 x 9= 63 ";
+                    dato[8,7] <- "8 x 9= 72 ";
+                    dato[8,8] <- "9 x 9= 81 ";
+                    dato[8,9] <- "10 x 9= 90";
+                    dato[9,0] <- "1 x10= 10 ";
+                    dato[9,1] <- "2 x10= 20 ";
+                    dato[9,2] <- "3 x10= 30 ";
+                    dato[9,3] <- "4 x10= 40 ";
+                    dato[9,4] <- "5 x10= 50 ";
+                    dato[9,5] <- "6 x10= 60 ";
+                    dato[9,6] <- "7 x10= 70 ";
+                    dato[9,7] <- "8 x10= 80 ";
+                    dato[9,8] <- "9 x10= 90 ";
+                    dato[9,9] <- "10 x10= 100";
+                    para fila <- 0 Hasta 9 Con Paso 1 hacer 
+                        para columna <- 0 hasta 9 con paso 1 Hacer
+                            Escribir dato[fila,columna]," " Sin Saltar;
+                        FinPara
+                        Escribir " ";
+                    FinPara
+                FinProceso
+            </pre>
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">VIDEO EXPLICATIVO</button>
+        <div class="panelp">
+            <h3>VIDEO EXPLICATIVO</h3>
+            <div style="text-align:center;" >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XN4MxeTlYo8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            
+        </div>
+       </div>
+       <script src="javasc.js"></script>
+</body>
+</html>

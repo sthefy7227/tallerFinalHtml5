@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>talleres de PSeInt</title>
+    <link rel="stylesheet"href="stilotj.css"/>
+</head>
+<body>
+    <br><br><h1 class="titulo">TALLER 2 JAVA CONDICIONALES</h1><br><br>
+    <div class="itemj">  
+        <button class="acordeonj">PRIMER PUNTO</button>
+        <div class="panelj">
+            <img src="j6.jpeg"class="imagen" alt="j6">
+           <p class="texto">
+            Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, 
+            deberá mostrar en pantalla: Usted es mayor de edad.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    public static void main(String[] args) {
+                    Scanner x = new Scanner(System.in);
+                    System.out.println("por favor digite su edad");
+                    int edad=x.nextInt();
+                    if (edad>=18) {
+                        System.out.println("usted es mayor de edad");
+                    }
+                    }
+                    }
+            </pre>
+            
+        </div>
+       </div>
+
+
+       <div class="itemj">  
+        <button class="acordeonj">SEGUNDO PUNTO</button>
+        <div class="panelj">
+            <img src="j7.jpeg"class="imagen" alt="j7">
+           <p class="texto">
+            Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, 
+            deberá mostrar en pantalla: Usted aún es un niño(a).
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    public static void main(String[] args) {
+                    Scanner x = new Scanner(System.in);
+                    System.out.println("por favor digite su edad");
+                    int edad=x.nextInt();
+                    if (edad<18) {
+                        System.out.println("usted aun es un niño");
+                    }
+                    }
+                    }
+            </pre>
+
+        </div>
+       </div>
+
+       <div class="itemj">  
+        <button class="acordeonj">TERCER PUNTO</button>
+        <div class="panelj">
+            <img src="j8.jpeg"class="imagen" alt="j8">
+           <p class="texto">
+            Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona 
+            es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de 
+            edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, 
+            deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede 
+            entrar a la fiesta, por favor devuélvase a su casa.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                
+                import java.util.Scanner;
+                public class Main
+
+                {
+                public static void main(String[] args) {
+                Scanner x = new Scanner(System.in);
+                System.out.println("por favor digite su nombre");
+                String nombre=x.next();
+                System.out.println("por favor digite su apellido");
+                String apellido=x.next();
+                System.out.println("por favor digite su edad");
+                int edad=x.nextInt();
+                if (edad>=18) {
+                    System.out.println(nombre+" "+apellido+" usted es mayor de edad, por lo tanto puede entrar a la fiesta");
+                    
+                }
+                if(edad<18&&edad>0){
+                    System.out.println(nombre+" "+apellido+" usted es menor de edad, por lo tanto, no puede entrar a la fiesta por favor devuelvase a su casa");
+                }
+                }
+                }
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemj">  
+        <button class="acordeonj">CUARTO PUNTO</button>
+        <div class="panelj">
+            <img src="j9.jpeg"class="imagen" alt="j9">
+           <p class="texto">
+            La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, 
+            requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. 
+            Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir
+             película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños
+            u otra novedad sobre la película.
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    
+                    public static void main(String[] args) {
+                        int num;
+                    Scanner x = new Scanner(System.in);
+                    System.out.println("por favor digite su nombre");
+                    String nombre=x.next();
+                    do{
+                    System.out.println("por favor digite una opcion");
+                    System.out.println("1.consultar peliculas disponibles");
+                    System.out.println("2. alquilar pelicula");
+                    System.out.println("3. tengo una novedad sobre una peicula que alquiler");
+                    System.out.println("4.salir");
+                    num=x.nextInt();
+                    switch(num){
+                        case 1:System.out.println("las peliculas disponibles son: ");
+                        System.out.println("matilda ");
+                        System.out.println("frozen ");
+                        System.out.println("zoo ");
+                        System.out.println(" ");
+                        break;
+                        case 2:System.out.println("que pelicula desea alquilar");
+                            String pelicula=x.next();
+                            System.out.println("perfecto "+pelicula+" esta disponible y quedo registrada a su nombre desea recibir la pelicula en: ");
+                            System.out.println("1.videotienda");
+                            System.out.println("2.a domicilio");
+                            int lugar=x.nextInt();
+                            if(lugar==1){
+                                System.out.println("su pelicula"+pelicula+" esta disponible para entregarsela en la videotienda gracias por utilizar nuestros servicios");
+                            }
+                            if(lugar==2){
+                                System.out.println("su pelicula "+pelicula+" esta disponible para entregarsela a domicilio por favor escriba la direccion a la que sera enviada");
+                                String direccion=x.next();
+                                System.out.println("su pelicula "+pelicula+" esta disponible para entregarla a la direccion: "+direccion+" gracias por utilizar nuestros servicios");
+                            }
+                            break;
+                        case 3:System.out.println("por favor diganos cual es su novedad");
+                            String novedad=x.next();
+                            System.out.println("su novedad"+novedad+"fue registrada esperamos darle una pronta solucion gracias por usar nuestros servicios");
+                            break;
+                        case 4:System.out.println("gracias por utilizar nuestros servicios, vuelva pronto");  
+                        break;
+                    }
+                    }
+                    while(num!=4);
+                    }
+                    }
+	
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemj">  
+        <button class="acordeonj">QUINTO PUNTO</button>
+        <div class="panelj">
+            <img src="j10.jpeg"class="imagen" alt="j10">
+           <p class="texto">
+            La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder 
+            facturar los productos que vende a sus clientes y para ello, los productos tienen unas características 
+            que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen
+            las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se 
+            presenten.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    
+                    public static void main(String[] args) {
+                        int opcion;
+                    Scanner x = new Scanner(System.in);
+                    do{
+                    System.out.println("bienvenido a la farmacia mi salud");
+                    System.out.println("por favor digite una opcion");
+                    System.out.println("1.comprar producto");
+                    System.out.println("2. consultar precio del producto");
+                    System.out.println("3. deseo devolver el producto");
+                    System.out.println("4.salir");
+                    opcion=x.nextInt();
+                    switch(opcion){
+                        case 1:System.out.println("que producto desea");
+                        String producto=x.next();
+                        System.out.println("ud acaba de comprar el producto "+producto+" gracias por su compra ");
+                        break;
+                        case 2:System.out.println("1. acetaminofen");
+                                System.out.println("2. loratidina");
+                                System.out.println("3. penicilina");
+                                System.out.println("4. ibuprofeno");
+                            System.out.println("que producto desea consultar: ");
+                            int producto1=x.nextInt();
+                                if (producto1==1) {
+                                    System.out.println("el precio de acetaminofen es 3000 pesos");
+                                }
+                                    
+                                if (producto1==2) {
+                                System.out.println("el precio de loratidina es 6000 pesos");
+                                }
+                                    
+                                if (producto1==3) {
+                                    System.out.println("el precio de ibuprofeno es 10000 pesos");
+                                }
+                                    
+                                if (producto1==4) {
+                                    System.out.println("el precio de penicilina es 23000 pesos");
+                                }
+                                System.out.println("vaya a la opcion 1 y digite el producto para comprarlo");
+                                    
+                            break;
+                        case 3:System.out.println("¿que producto desea devolver?");
+                            String producto2=x.next();
+                            System.out.println("¿por que desea devolver el producto?");
+                            String razon=x.next();
+                            System.out.println("el producto"+producto2+"sera devuelto por la razon "+razon+" gracias por utilizar nuestros servicios");
+                            break;
+                        case 4:System.out.println("gracias por utilizar nuestros servicios, vuelva pronto");  
+                        break;
+                    }
+                    }
+                    while(opcion!=4);
+                    }
+                    }
+
+            </pre>
+        </div>
+       </div>
+       <div class="itemj">  
+        <button class="acordeonj">SEXTO PUNTO</button>
+        <div class="panelj">
+            <img src="j11.jpeg"class="imagen" alt="j11">
+           <p class="texto">
+            El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas 
+            revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. 
+            Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+            También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el 
+            mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    
+                    public static void main(String[] args) {
+                        int opcion;
+                    Scanner x = new Scanner(System.in);
+                    do{
+                    System.out.println("Bienvenido al taller de motos el maquinista ");
+                    System.out.println("por favor digite una opcion");
+                    System.out.println("1.registrar ingreso al taller");
+                    System.out.println("2. consultar el registro de salida");
+                    System.out.println("3. consultar los arreglos que se le realizaron a su vehiculo");
+                    System.out.println("4.salir");
+                    opcion=x.nextInt();
+                    switch(opcion){
+                        case 1:System.out.println("realice las observaciones del ingreso del vehiculo");
+                        String observaciones=x.next();
+                        System.out.println("gracias por realizar el registro mas adelante podra consultar el registro de salida y los arreglos realizados a su vehiculo ");
+                        break;
+                        case 2:System.out.println("su vehiculo salio del taller el dia 15 de febrero de 2022 y las novedades a tener en cuenta son el cambio de aceite");
+                            
+                            break;
+                        case 3:System.out.println("los arreglos que se le realizaron al vehiculo fueron: arreglo de guaya de freno y cambio de empaque de culata");
+                            
+                            break;
+                        case 4:System.out.println("gracias por utilizar nuestros servicios, vuelva pronto");  
+                        break;
+                    }
+                    }
+                    while(opcion!=4);
+                    }
+                    }
+
+
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemj">  
+        <button class="acordeonj">SEPTIMO PUNTO</button>
+        <div class="panelj">
+            <img src="j12.jpeg"class="imagen" alt="j12">
+           <p class="texto">
+            La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC
+             (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para 
+             cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno
+              y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                public class Main
+                
+                {
+                   
+                public static void main(String[] args) {
+                    double peso, estatura, imc;
+                Scanner x = new Scanner(System.in);
+                System.out.println("digite su peso en kilogramos ");
+                peso=x.nextDouble();
+                System.out.println("digite su estatura en metros ");
+                estatura=x.nextDouble();
+                imc=peso/(estatura*estatura);
+                if (imc<=18.5){
+                    System.out.println("su indice de masa corporal es "+imc+" por lo tanto ud tiene un peso bajo");
+                }
+                else if (imc>=18.6){
+                    System.out.println("su indice de masa corporal es "+imc+" por lo tanto ud tiene un peso normal");
+                }
+                else if (imc<=25.9){
+                    System.out.println("su indice de masa corporal es "+imc+" por lo tanto ud tiene sobrepeso");
+                }
+                else if (imc<=29.9){
+                    System.out.println("su indice de masa corporal es "+imc+" por lo tanto ud tiene obesidad");
+                }
+                
+                }
+                }
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemj">  
+        <button class="acordeonj">OCTAVO PUNTO</button>
+        <div class="panelj">
+            <img src="j13.jpeg"class="imagen" alt="j13">
+           <p class="texto">
+            El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar
+             los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias
+              como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los
+               pedidos, las tortas disponibles y las ventas que se registren diariamente.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    
+                    public static void main(String[] args) {
+                    Scanner x = new Scanner(System.in);
+                    double total,cantidad;
+                        System.out.println("bienvenido a la pasteleria don carlos por favor ingresa tu nombre");
+                        String nombre=x.next();
+                        System.out.println("hola "+ nombre+ " por favor elija una opcion de las tortas que tenemos disponibles") ;
+                        System.out.println("1. torta de chocolate 10 personas");
+                        System.out.println("2. torta de chocolate 20 personas");
+                        System.out.println("3. torta de chocolate 30 personas");
+                        System.out.println("4. tota de vainilla 10 personas");
+                        System.out.println("5. torta de vainilla 20 personas");
+                        System.out.println("6. torta de vainilla 30 personas");
+                        System.out.println( "7. torta de helado 10 personas");
+                        System.out.println( "8. torta de helado 20 personas");
+                        System.out.println( "9. torta de helado 30 personas");
+                        System.out.println("10. torta 3 leches 10 personas");
+                        System.out.println("11. torta 3 leches 20 personas");
+                        System.out.println("12. torta 3 leches 30 personas");
+                        int opcion=x.nextInt();
+                        switch(opcion){
+                            case 1:
+                                
+                                System.out.println("haz elegido la torta de chocolate para 10 personas");
+                                System.out.println("su costo es de 15,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*15000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 2:
+                                
+                                System.out.println("haz elegido la torta de chocolate para 20 personas");
+                                System.out.println("su costo es de 25,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*25000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 3:
+                                
+                                System.out.println("haz elegido la torta de chocolate para 30 personas");
+                                System.out.println("su costo es de 40,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*40000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 4:
+                                
+                                System.out.println("haz elegido la torta de vainilla para 10 personas");
+                                System.out.println("su costo es de 15,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*15000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 5:
+                                
+                                System.out.println("haz elegido la torta de vaibilla para 20 personas");
+                                System.out.println("su costo es de 25,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*25000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 6:
+                                
+                                System.out.println("haz elegido la torta de vainilla para 30 personas");
+                                System.out.println("su costo es de 40,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*40000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 7:
+                                
+                                System.out.println("haz elegido la torta de helado para 10 personas");
+                                System.out.println("su costo es de 15,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*15000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 8:
+                                
+                                System.out.println("haz elegido la torta de helado para 20 personas");
+                                System.out.println("su costo es de 25,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*25000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 9:
+                                
+                                System.out.println("haz elegido la torta de helado para 30 personas");
+                                System.out.println("su costo es de 40,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*40000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 10:
+                                
+                                System.out.println("haz elegido la torta de 3 leches para 10 personas");
+                                System.out.println("su costo es de 15,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*15000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 11:
+                                
+                                System.out.println("haz elegido la torta de 3 leches para 20 personas");
+                                System.out.println("su costo es de 25,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*25000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                            case 12:
+                                
+                                System.out.println("haz elegido la torta de 3 leches para 30 personas");
+                                System.out.println("su costo es de 40.000,000 cop/ cada una");
+                                System.out.println("seleccione cuantas tortas quiere");
+                                cantidad=x.nextDouble();
+                                total= cantidad*40000;
+                                System.out.println("el total de su cuenta es: "+total);
+                                break;
+                    }
+                    System.out.println("gracias por utilizar nuestros servicios vuelva pronto");
+                    }
+                    }
+
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemj">  
+        <button class="acordeonj">NOVENO PUNTO</button>
+        <div class="panelj">
+            <img src="j14.jpeg"class="imagen" alt="j14">
+           <p class="texto">
+            El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes 
+            figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores
+             al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un 
+             rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo 
+             y mostrar su respectivo resultado.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    
+                    public static void main(String[] args) {
+                    Scanner x = new Scanner(System.in);
+                    double largo,ancho,total,base,altura,total1,base_1,base_2,altura1,total2;
+                    int num;
+                    do{
+                    System.out.println("seleccione que area desea calcular");
+                        System.out.println("1. rectangulo");
+                        System.out.println("2. triangulo");
+                        System.out.println("3. trapecio");
+                        System.out.println("4. salir");
+                        num = x.nextInt();
+                        
+                        switch(num){
+                            case 1:
+                                System.out.println("ingrese la medida del largo del rectangulo");
+                                largo= x.nextDouble();
+                                System.out.println("ingrese la medida del ancho del rectangulo");
+                                ancho= x.nextDouble();
+                                total = largo * ancho;
+                                System.out.println("el area de su rectangulo es: "+ total+" cm^2");
+                                break;
+                            case 2: 
+                                System.out.println("ingrese la base del triangulo");
+                                base= x.nextDouble();
+                                System.out.println("ingrese la altura del triangulo");
+                                altura= x.nextDouble();
+                                total1 = base * altura/2;
+                                System.out.println("el area de su triangulo es: "+ total1+" cm^2");
+                                break;
+                            case 3:
+                                System.out.println("ingrese la base 1 del trapecio");
+                                base_1= x.nextDouble();
+                                System.out.println("ingrese la base 2 del trapecio");
+                                base_2= x.nextDouble();
+                                System.out.println("ingrese la altura del trapecio");
+                                altura1= x.nextDouble();
+                                total2= (base_1+ base_2)/2*altura1;
+                                System.out.println("el area de su trapecio es: "+ total2+" cm^2");
+                                break;
+                                
+                        }
+                    }
+                        while(num!=4);
+                    }
+                    }
+
+
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemj">  
+        <button class="acordeonj">DECIMO PUNTO</button>
+        <div class="panelj">
+            <img src="j15.jpeg"class="imagen" alt="j15">
+           <p class="texto">
+            El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para
+             llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y
+            cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En 
+            los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al
+            valor que tiene en la cuenta.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                import java.util.Scanner;
+                    public class Main
+
+                    {
+                    
+                    public static void main(String[] args) {
+                    Scanner x = new Scanner(System.in);
+                        int  cuenta, saldo, retiro, deposito, opcion;
+                        saldo = 0;
+                        System.out.println("bienvenido a su banco fiel selecione una opcion"); 
+                        do{
+                            System.out.println("1. deposito");
+                            System.out.println("2. retiro");
+                            System.out.println("3. consultar saldo");
+                            System.out.println("4. salir");
+                            opcion= x.nextInt();
+                            switch(opcion){
+                                case 1:
+                                    System.out.println("ha elegido depositar dinero por favor ingrese el numero de cuenta");
+                                    cuenta=x.nextInt();
+                                    System.out.println("ingrese el monto a depositar");
+                                    deposito=x.nextInt();
+                                    if (deposito < 5) {
+                                        System.out.println("por favor ingrese un valor mayor a 5 ");
+                                    }
+                                    else
+                                        System.out.println("transaccion exitosa gracias por utilizar nuestros servicios");
+                                        saldo = saldo + deposito;
+                                case 2:
+                                    System.out.println("ha elegido retirar dinero por favor ingrese el numero de la cuenta");
+                                    cuenta=x.nextInt();
+                                    System.out.println("ingrese el monto a retirar");
+                                    retiro=x.nextInt();
+                                    if (retiro < saldo) {
+                                        System.out.println("transaccion exitosa");
+                                    }
+                                    else
+                                        System.out.println("ingrese un valor menor o igual a su saldo");
+                                    saldo = saldo - retiro;
+                                case 3:
+                                    System.out.println("su actual saldo es: "+ saldo);
+                                case 4:
+                                    System.out.println("gracias por utilizar nuestros servicios adios");
+                            }
+                        }
+                        while(opcion!=4);
+                    }
+                    }
+
+            </pre>
+            
+        </div>
+       </div>
+       <script src="javatj.js"></script>
+</body>
+</html>

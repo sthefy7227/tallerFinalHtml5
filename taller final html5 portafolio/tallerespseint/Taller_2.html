@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>talleres de PSeInt</title>
+    <link rel="stylesheet"href="stilops.css"/>
+</head>
+<body>
+    <br><br><h1 class="titulo">Taller 2 PSeInt condicionales</h1><br><br>
+    <div class="itemp">  
+        <button class="acordeonp">PRIMER PUNTO</button>
+        <div class="panelp">
+            <img src="p6.jpg"class="imagen" alt="p6">
+           <p class="texto">
+            Realizar un programa en el cual se solicite la edad de una persona. Si la persona es mayor o igual a 18 años, 
+            deberá mostrar en pantalla: Usted es mayor de edad.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_1
+                    definir edad Como Entero;
+                    Escribir "por favor ingrese su edad";
+                    leer edad;
+                    si edad > 18 Entonces
+                        Escribir "usted es mayor de edad";
+                    FinSi
+                FinProceso
+            </pre>
+            
+        </div>
+       </div>
+
+
+       <div class="itemp">  
+        <button class="acordeonp">SEGUNDO PUNTO</button>
+        <div class="panelp">
+            <img src="p7.jpg"class="imagen" alt="p7">
+           <p class="texto">
+            Realizar un programa en el cual se solicite la edad de una persona. Si la persona es menor a 18 años, 
+            deberá mostrar en pantalla: Usted aún es un niño(a).
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_2
+                    definir edad Como Entero;
+                    Escribir "por favor ingrese su edad";
+                    leer edad;
+                    si edad > 18 Entonces
+                        Escribir "usted es mayor de edad";
+                        sino escribir "usted aun es un niño";
+                    FinSi
+                FinProceso
+
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">TERCER PUNTO</button>
+        <div class="panelp">
+            <img src="p8.jpg"class="imagen" alt="p8">
+           <p class="texto">
+            Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona 
+            es mayor o igual a 18 años, entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de 
+            edad, por lo tanto puede entrar a la fiesta. Si la edad de la persona es menor que 18 años, entonces, 
+            deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, por lo tanto, no puede 
+            entrar a la fiesta, por favor devuélvase a su casa.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_3
+                    Definir nombre, apellido Como Caracter;
+                    Definir edad Como Entero;
+                    Escribir "digite su nombre";
+                    leer nombre;
+                    escribir "digite su apellido";
+                    leer apellido;
+                    Escribir "digite su edad";
+                    leer edad;
+                    si edad >= 18 Entonces
+                        Escribir nombre, " ", apellido, " usted es mayor de edad, por lo tanto puede entrar a la fiesta" ;
+                    FinSi
+                    si edad < 18 Entonces
+                        Escribir nombre, " ", apellido, " usted es menor de edad, por lo tanto no puede entrar a la fiesta, por favor devuelvase a su casa" ;
+                    FinSi
+                    
+                FinProceso
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">CUARTO PUNTO</button>
+        <div class="panelp">
+            <img src="p9.jpg"class="imagen" alt="p9">
+           <p class="texto">
+            La video tienda que presta sus servicios de alquiler de películas a los usuarios del barrio el Porvenir, 
+            requiere de una aplicación que permita registrar el alquiler de las películas que adquieren sus usuarios. 
+            Para cada usuario se debe permitir la opción de alquilar película, consultar películas disponibles y recibir
+             película en la video tienda con la opción de realizar anotaciones sobre estas si se llegan a presentar daños
+            u otra novedad sobre la película.
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_4
+                    Definir nombre, novedad, pelicula_alquiler, pelicula_lugar Como Caracter;
+                    Definir opcion Como Entero;
+                    Escribir "por favor digite su nombre";
+                    leer nombre;
+                    Escribir nombre, " por favor seleccione una opcion";
+                    Escribir "1. alquilar pelicula";
+                    Escribir "2.consultar peliculas disponibles";
+                    Escribir "3. tengo una novedad sobre una peicula que alquile";
+                    leer opcion;
+                    segun opcion hacer
+                        1:
+                            Escribir "que pelicula desea alquilar";
+                            leer pelicula_alquiler;
+                            Escribir "perfecto ", nombre, " la pelicula",pelicula_alquiler," quedo registrada a su nombre desea recogerla en tienda o la desea a domicilio";
+                            leer pelicula_lugar;
+                            Escribir nombre, " su pelicula",pelicula_alquiler," esta disponible para entregarsela", pelicula_lugar, "gracias por utilizar nuestros servicios";
+                        2:
+                            Escribir "las peliculas disponibles son: ";
+                            Escribir "frozen";
+                            Escribir "mi pobre algelito";
+                            Escribir "una aventura en pañales";
+                        3:
+                            Escribir "por favor diganos cual es su novedad";
+                            leer novedad;
+                            Escribir nombre, " su novedad ", novedad, " quedo registrada esperamos darle una pronta solucion gracias por utilizar nuestros servicios";
+                    FinSegun
+	
+            </pre>
+        </div>
+       </div>
+
+       <div class="itemp">  
+        <button class="acordeonp">QUINTO PUNTO</button>
+        <div class="panelp">
+            <img src="p10.jpg"class="imagen" alt="p10">
+           <p class="texto">
+            La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder 
+            facturar los productos que vende a sus clientes y para ello, los productos tienen unas características 
+            que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen
+            las opciones de compra de producto, consulta de precios por producto y devoluciones en caso de que se 
+            presenten.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_5
+                    Definir opcion Como Entero;
+                    definir producto,producto1,producto2, razon Como Caracter;
+                    Escribir "bienvenido a la farmacia mi salud
+                    Escribir "estos son los productos que tenemos disponibles en el momento";
+                    Escribir "acetaminofen";
+                    Escribir "loratidina";
+                    Escribir "ibupofreno";
+                    Escribir "penicilina";
+                    Escribir "por favor seleccione una de las siguientes opciones";
+                    Escribir "1. comprar producto";
+                    Escribir "2. consultar precio del producto";
+                    Escribir "3. deseo devolver un producto";
+                    
+                    Leer opcion;
+                    segun opcion hacer
+                        1:
+                            Escribir "que producto desea";
+                            leer producto;
+                            Escribir "ud acaba de comprar el producto ",producto," gracias por su compra ";
+                        2:
+                            Escribir "que producto desea consultar";
+                            leer producto1;
+                            si producto1 = "acetaminofen" Entonces
+                                Escribir "el precio de acetaminofen es 3000 pesos";
+                            FinSi
+                            si producto1 = "loratidina" Entonces
+                                Escribir "el precio de loratidina es 6000 pesos";
+                            FinSi
+                            si producto1 = "ibuprofeno" Entonces
+                                Escribir "el precio de ibuprofeno es 10000 pesos";
+                            FinSi
+                            si producto1 = "penicilina" Entonces
+                                Escribir "el precio de penicilina es 23000 pesos";
+                            FinSi
+                        3:
+                            Escribir "que producto desea devolver";
+                            leer producto2;
+                            Escribir "por que desea devolver el producto?";
+                            leer razon;
+                            Escribir "el producto ", producto2, " sera devuelto por la razon " , razon, " gracias por utilizar nuestros servicios";
+                    FinSegun
+                    
+                    
+                FinProceso
+
+            </pre>
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">SEXTO PUNTO</button>
+        <div class="panelp">
+            <img src="p11.jpg"class="imagen" alt="p11">
+           <p class="texto">
+            El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas 
+            revisiones y requiere una aplicación que le permita registrar los servicios generados a sus clientes. 
+            Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+            También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el 
+            mecánico en caso de que se requiera inventariar cambios repuestos en la motocicleta al entregarla.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_6
+                    Definir opcion Como Entero;
+                    Definir nombre, observaciones Como Caracter;
+                    Escribir "Bienvenido al taller de motos el maquinista por favor escoja una opcion";
+                    Escribir "1. registrar ingreso al taller";
+                    Escribir "2. consultar el registro de salida";
+                    Escribir "3. consultar los arreglos que se le realizaron a su vehiculo";
+                    leer opcion;
+                    Segun opcion Hacer
+                        1:
+                            Escribir "realice las observaciones del ingreso del vehiculo";
+                            leer observaciones;
+                            Escribir "gracias por realizar el registro mas adelante podra consultar el registro de salida y los arreglos realizados a su vehiculo ";
+                        2:
+                            Escribir "su vehiculo salio del taller el dia xx del mes xx del año xx y las novedades a tener en cuenta son xxx";
+                            
+                        3:
+                            Escribir "los arreglos que se le realizaron a su vehiculo fueron los siguientes: ";
+                        De Otro Modo:
+                            Escribir "la opcion elegida no es valida";
+                            
+                            
+                    FinSegun
+                    
+                FinProceso
+
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">SEPTIMO PUNTO</button>
+        <div class="panelp">
+            <img src="p12.jpg"class="imagen" alt="p12">
+           <p class="texto">
+            La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC
+             (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en metros Para 
+             cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno
+              y establecer en qué rango se encuentra (bajo peso, normal, sobrepeso y obeso).
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_7
+                    Definir peso, estatura, imc Como real;
+                    
+                    Escribir "digite su peso en kilogramos";
+                    leer peso;
+                    Escribir "digite su estatura en metros";
+                    leer estatura;
+                    imc <- peso / (estatura * estatura);
+                    
+                    si imc <= 18.5 Entonces
+                        Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene bajo peso";
+                    FinSi
+                    si imc >= 18.6 Entonces
+                        Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene peso normal";
+                    FinSi
+                    si imc >= 25.9 Entonces
+                        Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene sobrepeso";
+                    FinSi
+                    si imc >= 29.9 Entonces
+                        Escribir "su indice de masa corporal es ", imc, "por lo tanto ud tiene obesidad";
+                    FinSi
+                    
+                FinProceso
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">OCTAVO PUNTO</button>
+        <div class="panelp">
+            <img src="p13.jpg"class="imagen" alt="p13">
+           <p class="texto">
+            El pastelero Don Carlos es el mejor pastelero de la ciudad y requiere una aplicación que le permita registrar
+             los pedidos de los clientes en cuanto a las tortas que realiza. Cada torta tiene unas características propias
+              como sabor, cantidad (porciones) y decoraciones). Se requiere que la aplicación permita registrar los
+               pedidos, las tortas disponibles y las ventas que se registren diariamente.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_8
+                    Definir nombre Como Caracter;
+                    Definir opcion, cantidad Como Entero;
+                    Escribir "bienvenido a la pasteleria don carlos por favor ingresa tu nombre";
+                    leer nombre;
+                    Escribir "hola ", nombre, " por favor elija una opcion";
+                    Escribir "1. torta de chocolate 10 personas";
+                    Escribir "2. torta de chocolate 20 personas";
+                    Escribir "3. torta de chocolate 30 personas";
+                    Escribir "4. tota de vainilla 10 personas";
+                    Escribir "5. torta de vainilla 20 personas";
+                    Escribir "6. torta de vainilla 30 personas";
+                    Escribir "7. torta de helado 10 personas";
+                    Escribir "8. torta de helado 20 personas";
+                    Escribir "9. torta de helado 30 personas";
+                    Escribir "10. torta 3 leches 10 personas";
+                    Escribir "11. torta 3 leches 20 personas";
+                    Escribir "12. torta 3 leches 30 personas";
+                    leer opcion;
+                    Segun opcion Hacer
+                        1:
+                            
+                            Escribir "haz elegido la torta de chocolate para 10 personas";
+                            Escribir "su costo es de 15,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 15,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 30,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 45,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 60,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 90,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 105,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 135,000 cop";
+                            FinSi
+                            
+                        2:
+                            
+                            Escribir "haz elegido la torta de chocolate para 20 personas";
+                            Escribir "su costo es de 25,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 25,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 50,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 100,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 125,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 150,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 175,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 225,000 cop";
+                            FinSi
+                        3:
+                            
+                            Escribir "haz elegido la torta de chocolate para 30 personas";
+                            Escribir "su costo es de 40,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 40,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 80,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 160,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 240,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 280,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 320,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 360,000 cop";
+                            FinSi
+                        4:
+                            
+                            Escribir "haz elegido la torta de vainilla para 10 personas";
+                            Escribir "su costo es de 15,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 15,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 30,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 45,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 60,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 90,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 105,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 135,000 cop";
+                            FinSi
+                        5:
+                            
+                            Escribir "haz elegido la torta de vainilla para 20 personas";
+                            Escribir "su costo es de 25,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 25,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 50,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 100,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 125,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 150,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 175,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 225,000 cop";
+                            FinSi
+                        6:
+                            
+                            Escribir "haz elegido la torta de vainilla para 30 personas";
+                            Escribir "su costo es de 40,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 40,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 80,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 160,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 240,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 280,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 320,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 360,000 cop";
+                            FinSi
+                        7:
+                            
+                            Escribir "haz elegido la torta de helado para 10 personas";
+                            Escribir "su costo es de 15,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 15,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 30,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 45,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 60,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 90,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 105,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 135,000 cop";
+                            FinSi
+                        8:
+                            
+                            Escribir "haz elegido la torta de helado para 20 personas";
+                            Escribir "su costo es de 25,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 25,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 50,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 100,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 125,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 150,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 175,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 225,000 cop";
+                            FinSi
+                        9:
+                            
+                            Escribir "haz elegido la torta de helado para 30 personas";
+                            Escribir "su costo es de 40,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 40,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 80,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 160,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 240,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 280,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 320,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 360,000 cop";
+                            FinSi
+                        10:
+                            
+                            Escribir "haz elegido la torta de 3 leches para 10 personas";
+                            Escribir "su costo es de 15,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 15,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 30,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 45,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 60,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 90,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 105,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 135,000 cop";
+                            FinSi
+                        11:
+                            
+                            Escribir "haz elegido la torta de 3 leches para 20 personas";
+                            Escribir "su costo es de 25,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 25,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 50,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 75,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 100,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 125,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 150,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 175,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 225,000 cop";
+                            FinSi
+                        12:
+                            
+                            Escribir "haz elegido la torta de 3 leches para 30 personas";
+                            Escribir "su costo es de 40,000 cop/ cada una";
+                            Escribir "seleccione cuantas tortas quiere";
+                            leer cantidad;
+                            si cantidad = 1 entonces
+                                Escribir "el valor total de su compra es 40,000 cop";
+                            FinSi
+                            si cantidad = 2 Entonces
+                                Escribir "el valor total de su compra es 80,000 cop";
+                            FinSi
+                            si cantidad = 3 Entonces
+                                Escribir "el valor total de su compra es 120,000 cop";
+                            FinSi
+                            si cantidad = 4 Entonces
+                                Escribir "el valor total de su compra es 160,000 cop";
+                            FinSi
+                            si cantidad = 5 Entonces
+                                Escribir "el valor total de su compra es 200,000 cop";
+                            FinSi
+                            si cantidad = 6 Entonces
+                                Escribir "el valor total de su compra es 240,000 cop";
+                            FinSi
+                            si cantidad = 7 Entonces
+                                Escribir "el valor total de su compra es 280,000 cop";
+                            FinSi
+                            si cantidad = 8 Entonces
+                                Escribir "el valor total de su compra es 320,000 cop";
+                            FinSi
+                            si cantidad = 9 Entonces
+                                Escribir "el valor total de su compra es 360,000 cop";
+                            FinSi
+                    FinSegun
+                    
+                    
+
+
+                FinProceso
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">NOVENO PUNTO</button>
+        <div class="panelp">
+            <img src="p14.jpg"class="imagen" alt="p14">
+           <p class="texto">
+            El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes 
+            figuras geométricas, para ello requiere una aplicación que le facilite el ejercicio solicitándole los valores
+             al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un 
+             rectángulo, triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo 
+             y mostrar su respectivo resultado.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_9
+                    Definir opcion Como Entero;
+                    Definir largo, ancho, base, altura, base_1, base_2,total Como Real;
+                    Escribir "seleccione que area desea calcular";
+                    Escribir "1. rectangulo";
+                    Escribir "2. triangulo";
+                    Escribir "3. trapecio";
+                    leer opcion;
+                    
+                    Segun opcion Hacer
+                        1:
+                            Escribir "ingrese la medida del largo del rectangulo";
+                            leer largo;
+                            Escribir "ingrese la medida del ancho del rectangulo";
+                            leer ancho;
+                            total <- largo * ancho;
+                            Escribir "el area de su rectangulo es: ", total;
+                        2: 
+                            Escribir "ingrese la base del triangulo";
+                            leer base;
+                            Escribir "ingrese la altura del triangulo";
+                            leer altura;
+                            total <- base * altura;
+                            Escribir "el area de su triangulo es: ", total;
+                        3:
+                            Escribir "ingrese la base 1 del trapecio";
+                            leer base_1;
+                            Escribir "ingrese la base 2 del trapecio";
+                            leer base_2;
+                            Escribir "ingrese la altura del trapecio";
+                            leer altura;
+                            total <- (base_1+ base_2)/2*altura;
+                            Escribir "el area de su trapecio es: ", total;
+                    FinSegun
+                FinProceso
+
+
+            </pre>
+            
+        </div>
+       </div>
+       <div class="itemp">  
+        <button class="acordeonp">DECIMO PUNTO</button>
+        <div class="panelp">
+            <img src="p15.jpg"class="imagen" alt="p15">
+           <p class="texto">
+            El banco "Su banco fiel" es un banco que inicia sus actividades financieras y necesita una aplicación para
+             llevar las cuentas de sus usuarios; por lo tanto, se sugiere que la cuenta tenga los atributos titular y
+            cantidad. Para cada cliente las cuentas permitirán realizar ingresos, retiros o consultas de valor. En 
+            los ingresos no se pueden insertar valores negativos y para los retiros el valor no puede ser mayor al
+            valor que tiene en la cuenta.
+            </p>
+            <h3>CODIGO</h3>
+            <pre>
+                Proceso PUNTO_10
+                    Definir titular Como Caracter;
+                    Definir cuenta, saldo, retiro, deposito, opcion Como Entero;
+                    saldo <- 0;
+                    Escribir "bienvenido a su banco fiel selecione una opcion";
+                    Repetir
+                        Escribir "1. deposito";
+                        Escribir "2. retiro";
+                        Escribir "3. consultar saldo";
+                        Escribir "4. salir";
+                        leer opcion;
+                        segun opcion Hacer
+                            1:
+                                Escribir "ha elegido depositar dinero por favor ingrese el numero de cuenta";
+                                leer cuenta;
+                                Escribir "ingrese el monto a depositar";
+                                leer deposito;
+                                si deposito < 5 Entonces
+                                    Escribir "por favor ingrese un valor mayor a 5 ";
+                                SiNo
+                                    Escribir "transaccion exitosa gracias por utilizar nuestros servicios";
+                                FinSi
+                                saldo <- saldo + deposito;
+                                Esperar 5 Segundos;
+                                Limpiar Pantalla;
+                            2:
+                                Escribir "ha elegido retirar dinero por favor ingrese el numero de la cuenta";
+                                leer cuenta;
+                                Escribir "ingrese el monto a retirar";
+                                leer retiro;
+                                si retiro < saldo Entonces
+                                    Escribir "transaccion exitosa";
+                                SiNo
+                                    Escribir "ingrese un valor menor o igual a su saldo";
+                                FinSi
+                                saldo <- saldo - retiro;
+                                Esperar 5 Segundos;
+                                Limpiar Pantalla;
+                            3:
+                                Escribir "su actual saldo es: ", saldo;
+                                Esperar 5 Segundos;
+                                Limpiar Pantalla;
+                            4:
+                                Escribir "gracias por utilizar nuestros servicios adios";
+                                
+                                
+                        FinSegun
+                    Hasta Que opcion == 4
+                    
+
+                FinProceso
+            </pre>
+            
+        </div>
+       </div>
+
+
+
+       <div class="itemp">  
+        <button class="acordeonp">VIDEO EXPLICATIVO</button>
+        <div class="panelp">
+            <h3>VIDEO EXPLICATIVO</h3>
+            <div style="text-align:center;" >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/K6xs4rRqghs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            
+        </div>
+       </div>
+       <script src="javasc.js"></script>
+</body>
+</html>
